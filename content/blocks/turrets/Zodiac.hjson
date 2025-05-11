@@ -1,0 +1,76 @@
+"type": ItemTurret,
+"name": Zodiac,
+"description": ...
+"size": 5,
+"health": 1850,
+range: 300,
+rotateSpeed: 5,
+reload: 70
+recoilAmount: 3
+shootSound: malignShoot
+shoot: {
+type: ShootPattern
+shots: 8
+shotDelay: 2
+}
+consumes: {
+  "power": 1.8
+  "liquid": {
+    "liquid": "liquid-active-xenon",
+    "amount": 0.8,
+    "optional": false,
+    "update": false,
+    "booster": false
+  }
+}
+ammoTypes: {
+  salt: {
+    type: FlakBulletType
+    homingPower: 0.025
+    homingRange: 100
+    homingDelay: 25
+    sprite: missile-large
+    buildingDamageMultiplier: 0.4
+    hitColor: EEEEFF
+    inaccuracy: 18
+    damage: 80
+    width: 8
+    height: 16
+    collidesAir: true
+    collidesGround: true
+    collides: true
+    speed: 6
+    lifetime: 50
+    explodeRange: 120
+    explodeDelay: 0
+    pierceCap: 3
+    pierce: true
+    pierceBuilding: true
+    trailColor: 74627D
+    trailChance: -1
+    trailEffect: colorSpark
+    trailInterval: 3
+    trailRotation: true
+    trailLength: 2
+    fragSpread: 0
+    fragRandomSpread: 0
+    fragBullet: {
+      type: LaserBulletType
+      buildingDamageMultiplier: 0.25
+      width: 18
+      length: 160
+      sideAngle: 175
+      sideWidth: 1
+      sideLength: 40
+      lifetime: 20
+      pierce: true
+      pierceBuilding: true
+      drawSize: 200
+      damage: 50
+    }
+  }
+}
+category: turret
+requirements: [
+  cadmium/1
+]

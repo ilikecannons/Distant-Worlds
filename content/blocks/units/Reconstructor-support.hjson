@@ -1,0 +1,27 @@
+name: Support Units Reconstructor
+description: Upgrades support units.
+type: Reconstructor
+size: 3
+health: 1200
+constructTime: 1500
+category: units
+liquidCapacity: 60
+consumes: {
+  power: 2
+    items: {
+      items: [
+        sodium/20
+        lithium/20
+        carborundum/30
+      ]
+    }
+}
+upgrades: [
+  [sflare-1, sflare-2]
+]
+requirements: [
+  cadmium/150
+  lithium/85
+  purifiedsand/20
+  carborundum/75
+]

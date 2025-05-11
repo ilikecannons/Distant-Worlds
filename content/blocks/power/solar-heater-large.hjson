@@ -1,0 +1,31 @@
+type: HeaterGenerator
+name: Quasi-Inductive Solar Panel
+description: Makes heat and power passively.
+size: 4
+category: power
+requirements: [
+  cadmium/125
+  lithium/70
+  carborundum/90
+  metallic-frag/45
+]
+powerProduction: 1.6
+generateEffect: none
+heatOutput: 5
+researchCost: [
+  cadmium/30
+  lithium/24
+  carborundum/48
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawHeatOutput
+      heatColor: 641616A6
+    }
+  ]
+}

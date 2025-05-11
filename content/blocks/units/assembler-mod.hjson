@@ -1,0 +1,13 @@
+Type: UnitAssemblerModule
+health: 930
+size: 3
+consumes: {
+power: 4.5
+}
+category: units
+requirements: [
+  cadmium/600
+  carborundum/520
+  diamond/340
+  metallic-frag/160
+]

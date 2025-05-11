@@ -1,0 +1,39 @@
+name: Spider-mech Constructor
+description: Makes spiders.
+type: UnitFactory
+health: 800
+size: 3
+consumes: {
+  power: 1.3
+}
+plans: [
+  {
+    unit: cspider-1
+    time: 1200
+    requirements: [
+      cadmium/35
+      iceshard/10
+      sodium/15
+    ]
+  }
+]
+requirements: [
+  cadmium/55
+  quartz/45
+  iceshard/30
+]
+research: {
+  parent: Constructor-mech,
+  objectives: [
+    {
+      type: "OnSector",
+      preset: "cryoo-lake"
+    }
+  ]
+}
+category: units
+researchCost: [
+    cadmium/125
+    quartz/105
+    iceshard/80
+  ]

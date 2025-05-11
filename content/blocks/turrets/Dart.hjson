@@ -1,0 +1,105 @@
+"type": PowerTurret,
+"name": Dart,
+"description": Small turret, quite good for point defense.
+"size": 1,
+"health": 260,
+range: 150,
+rotateSpeed: 8,
+reload: 8
+consumes: {
+  power: 0.4
+}
+burstSpacing: 1
+shots: 1
+xRand: 1
+recoilAmount: 3
+shootSound: DartSound
+shootType: {
+    type: BasicBulletType,
+    speed: 5
+    lifetime: 30
+    damage: 5
+    width: 5
+    height: 7
+    frontColor: 9f9f9f
+    backColor: f9f9f9
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    ammoMultiplier: 1
+    collidesTiles: true
+    explodeRange: 1
+    splashDamageRadius: 1
+    splashDamage: 30
+    hitEffect: pointHit
+    minWarmup: 0.99
+    warmupMaintainTime: 120
+    shootWarmupSpeed: 0.05
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+              type: ParticleEffect
+              particles: 3
+              lifetime: 30
+              length: 10
+              sizeFrom: 2
+              sizeTo: 0
+              colorFrom: dfe8eb
+              colorTo: c8dee3
+              strokeFrom: 1
+              strokeTo: 0
+              interp: pow3Out
+              spin: 1
+              sizeInterp: pow3In
+              region: akrehela-star1
+            }
+        ]
+    }
+}
+category: turret
+requirements: [
+  cadmium/25
+  quartz/5
+  iceshard/10
+]
+drawer: {
+  type: DrawTurret
+  basePrefix: Dart-
+  parts: [
+    {
+    type: RegionPart
+    suffix: -wing
+    mirror: true
+    moveY: 1
+    moveX: -1
+    moveRot: 0
+    under: true
+    }
+    {
+    type: RegionPart
+    suffix: -spike
+    mirror: false
+    moveY: 2
+    moveX: 0
+    moveRot: 0
+    under: true
+    }
+    {
+    type: RegionPart
+    suffix: -main
+    mirror: false
+    under: false
+    }
+  ]
+}
+research: {
+    parent: "point",
+    objectives: [
+      
+    ]
+}
+researchCost: [
+  cadmium/100
+  quartz/20
+  iceshard/40
+]

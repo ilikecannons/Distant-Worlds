@@ -1,0 +1,76 @@
+type: ConsumeGenerator
+size: 5
+name: Graviton Inversion Generator
+description: You'd better pray that this thing has a failsafe.
+health: 1375
+hasLiquids: true
+canOverdrive: false
+liquidCapacity: 100
+itemDuration: 220
+baseExplosiveness: 0
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawPlasma
+      plasmas: 4
+      plasma1: 96e7ff
+      plasma2: 4fa7ff
+      plasma3: 13b1e0
+      plasma4: 0c9eca
+    }
+    {
+      type: DrawDefault
+    }
+    {
+       "type": "DrawGlowRegion",
+       "suffix": "-top", 
+       "glowScale": 10,
+       "blending": additive,
+       "color": "66B1FF"
+       "alpha": 1
+    }
+  ]
+}
+consumes: {
+    "liquids": [
+     liquid-keatrine/0.4
+     liquid-active-xenon/0.3
+    ]
+}
+generateEffect: {
+    type: RadialEffect
+    rotationSpacing: 60
+    amount: 4
+    lengthOffset: 6
+    effect: {
+      particles: 1
+      length: 180
+      lifetime: 600
+      cone: 30
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 0
+      sizeTo: 18
+      colorFrom: c0f0f044
+      colorTo: 50909000
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 111
+    }
+  }
+powerProduction: 72
+category: power
+requirements: [
+  cadmium/800
+  carborundum/520
+  lithium/635
+  diamond/200
+  gold/485
+]
+ambientSound: hum
+ambientSoundVolume: 1.2

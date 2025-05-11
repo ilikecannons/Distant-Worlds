@@ -1,0 +1,56 @@
+type: ConsumeGenerator
+name: CTG
+description: Burns Carbon for energy.
+size: 1
+health: 135
+squareSprite: false
+hasPower: true
+hasItems: true
+consumes: {
+  "items": {
+    "items": [
+      "carbon/1"
+    ]
+  }
+}
+	drawer: {
+	type: DrawMulti
+        drawers: [
+        {
+        type: DrawDefault
+        }
+      {
+    type: DrawParticles
+    color: FFBAA6FF
+    alpha: 0.3
+    reverse: true
+    blending: additive
+    particleSize: 2
+    particleRad: 6
+    particles: 14
+    fadeMargin: 0.9
+    rotateScl: 6
+    particleLife: 100
+    }
+]
+}
+powerProduction: 0.8
+requirements: [
+  "carbon/10"
+  "cadmium/9"
+]
+research: {
+  parent: carbon-sifter,
+  objectives: [
+    {
+      type: "OnSector",
+      preset: "crash-site"
+    }
+  ]
+}
+researchCost: [
+  cadmium/40
+  carbon/36
+]
+category: "power"
+alwaysUnlocked: true  

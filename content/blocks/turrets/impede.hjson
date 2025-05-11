@@ -1,0 +1,18 @@
+type: PointDefenseTurret
+name: Impede
+description: Knocks bullets out of the air.
+size: 2
+reload: 10
+health: 945
+bulletDamage: 14
+range: 190
+consumes: {
+  power: 3.8
+}
+requirements: [
+  cadmium/100
+  iceshard/80
+  carborundum/60
+  gold/40
+]
+category: turret

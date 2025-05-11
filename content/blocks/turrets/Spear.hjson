@@ -1,0 +1,152 @@
+    "type": "ItemTurret",
+	"name": "Spear",
+	"description": "Short-ranged enemy wrecker."
+        "details": "Feed it ice to make its bullets last longer",
+    "size": 2,
+    "health": 540,
+    "reload": 70,
+    "range": 120,
+    "maxAmmo": 12,
+    "inaccuracy": 2,
+    "shots": 2,
+    "targetAir": true,
+    "targetGround": true,
+    "shootCone": 10,
+    "spread": 1,
+    "recoilAmount": 5.5,
+    "restitution": 0.5,
+    "minWarmup": 0.8,
+    "warmupMaintainTime": 90,
+    "shootWarmupSpeed": 0.05,
+    "rotateSpeed": 5,
+    "shootSound": "shotgun",
+    "ammoPerShot": 2,
+    "ammoTypes": {
+        "cadmium": {
+            "type": "shrapnelBulletType",
+            "lifetime": 25,
+            "damage": 35,
+            serrations: 4
+            serrationSpacing: 16
+            serrationLenScl: 17
+            serrationWidth: 5
+            hitLarge: true
+            "fromColor": "ffccccff",
+            "toColor": "99444499",
+            "length": 100,
+            "width": 8,
+            "hitEffect": "blastExplosion",
+            "shootEffect": "blastExplosion",
+            "pierce": true,
+            "smokeEffect": "hitBulletBig"
+        }
+        "iceshard": {
+            "type": "shrapnelBulletType",
+            "lifetime": 70,
+            "damage": 30,
+            serrations: 4
+            serrationSpacing: 16
+            serrationLenScl: 17
+            serrationWidth: 5
+            hitLarge: true
+            "fromColor": "ccffffff",
+            "toColor": "222277",
+            "length": 120,
+            "width": 8,
+            "hitEffect": "blastExplosion",
+            "shootEffect": "blastExplosion",
+            "pierce": true,
+            "smokeEffect": "hitBulletBig"
+        }
+	"sodium": {
+            "type": "shrapnelBulletType",
+            "lifetime": 25,
+            "damage": 53,
+            serrations: 4
+            serrationSpacing: 16
+            serrationLenScl: 17
+            serrationWidth: 5
+            hitLarge: true
+            "fromColor": "ffff99ff",
+            "toColor": "99994499",
+            "length": 100,
+            "width": 15,
+            "hitEffect": "blastExplosion",
+            "shootEffect": "blastExplosion",
+            "pierce": true,
+            "smokeEffect": "none",
+			"smokeEffect": {
+				"type": "MultiEffect",
+				"effects": [
+				{
+              type: ParticleEffect
+              particles: 5
+              lifetime: 20
+              length: 20
+              sizeFrom: 5
+              sizeTo: 1
+              colorFrom: 9daeff
+              colorTo: 9daeff00
+              strokeFrom: 3
+              strokeTo: 1.5
+              interp: pow3Out
+              spin: 0
+              sizeInterp: pow2In
+              region: akrehela-smoke
+            }
+				]
+			},
+        }
+    },
+category: turret
+requirements: [
+  cadmium/30
+  quartz/15
+  ]
+drawer: {
+  type: DrawTurret
+  basePrefix: Spear-
+  parts: [
+    {
+    type: RegionPart
+    suffix: -spikea
+    mirror: true
+    progress: warmup
+    heatProgress: warmup
+    moveY: -2.5
+    moveX: 2.5
+    under: true
+    }
+    {
+    type: RegionPart
+    suffix: -spikeb
+    mirror: true
+    progress: warmup
+    heatProgress: warmup
+    moveY: -2.6
+    moveX: 2.6
+    under: true
+    }
+    {
+    type: RegionPart
+    suffix: -main
+    progress: warmup
+    heatProgress: warmup
+    mirror: false
+    under: true
+    }
+  ]
+}
+research: {
+    parent: "point",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "crash-site"
+        }
+    ]
+},
+  researchCost: [
+    cadmium/150
+    quartz/75
+  ]

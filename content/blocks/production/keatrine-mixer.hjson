@@ -1,0 +1,68 @@
+  "type": "GenericCrafter",
+  "health": 185,
+  "size": 2,
+  "squareSprite": true,
+  "hasItems": true,
+  "craftTime": 80,
+  "craftEffect": "none",
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+	
+        {
+          "type": "DrawRegion",
+          "suffix": "-bottom"
+	},
+        {
+          "type": "DrawLiquidRegion"
+          suffix: -liquid
+          drawLiquid: liquid-keatrine
+        }
+        {	
+          "type": "DrawPistons"
+          suffix: -piston1
+          sinMag: 9
+          sinScl: 8
+          angleOffset: 45
+          sides: 4
+	}
+        {
+          "type": "DrawDefault"
+        },
+        
+    ]
+    },
+  "hasPower": true,
+  "hasLiquids": true,
+  "updateEffect": "none",
+  "consumes": {
+    "power": 0.5
+    "items": [
+      "keatite/1"
+    ],
+    "liquids": [
+      "water/0.5"
+    ],
+
+  },
+  "requirements": [
+    cadmium/55
+    carbon/20
+    iceshard/35
+  ],
+  research: {
+    parent: sodium-extractor,
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "cryoo-lake"
+        }
+    ]
+  }
+  researchCost: [
+    cadmium/110
+    carbon/40
+    iceshard/70
+  ]
+  "category": "crafting",
+  "outputLiquid": "liquid-keatrine/0.4"

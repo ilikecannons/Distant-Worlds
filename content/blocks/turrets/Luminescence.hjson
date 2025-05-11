@@ -1,0 +1,33 @@
+"type": ContinuousTurret,
+"name": Luminescence
+"description": Fires a lustre beam using resonant power.
+"size": 2,
+"health": 1050,
+targetHealing: true
+range: 320
+rotateSpeed: 4.5
+reload: 6
+burstSpacing: 3
+shots: 1
+xRand: 0
+shootSound: malignShoot
+recoilAmount: 4
+consumes: {
+  power: 4
+}
+loopSound: LuminescenceSound
+shootType: {
+  type: PointLaserBulletType
+  color: 02097d
+  length: 150
+  width: 24
+  damage: 7
+  buildingDamageMultiplier: 0.40
+}
+category: turret
+requirements: [
+    cadmium/65
+    carbon/30
+    lithium/35
+    carborundum/40
+]

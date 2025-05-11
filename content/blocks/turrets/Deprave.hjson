@@ -1,0 +1,293 @@
+"type": ItemTurret,
+"name": Azimuth,
+"description": "Fires extremely powerful bursts of flak artillery that frag into lasers, dealing massive amounts of damage.",
+"size": 5,
+"health": 1938,
+range: 450,
+rotateSpeed: 1,
+reload: 70
+recoilAmount: 3
+shootSound: pulseBlast
+minWarmup: 0.999
+warmupMaintainTime: 180
+shootWarmupSpeed: 0.05
+category: turret
+restitution: 0.1
+shoot: {
+type: ShootPattern
+shots: 20
+shotDelay: 0
+}
+consumes: {
+  "power": 12,
+  "liquid": {
+    "liquid": "liquid-active-xenon",
+    "amount": 0.7,
+    "optional": false,
+    "update": false,
+    "booster": false
+  }
+}
+ammoTypes: {
+  metallic-frag: {
+    type: BasicBulletType
+    homingPower: 0.06
+    homingRange: 100
+    homingDelay: 10
+    sprite: missile-large
+    buildingDamageMultiplier: 0.65
+    inaccuracy: 100
+    damage: 25
+    width: 9
+    height: 16
+    collidesAir: true
+    collidesGround: true
+    collides: true
+    speed: 6
+    lifetime: 75
+    explodeRange: 120
+    explodeDelay: 0
+    pierceCap: 3
+    pierce: true
+    pierceBuilding: true
+    trailColor: 74627D
+    trailChance: 0.1
+    trailEffect: colorSpark
+    trailInterval: 3
+    trailRotation: true
+    trailLength: 16
+    hitEffect: [rocketSmoke, pointBeam]
+    fragSpread: 0
+    fragRandomSpread: 0
+    fragBullet: {
+      type: LaserBulletType
+      buildingDamageMultiplier: 0.25
+      width: 18
+      length: 160
+      sideAngle: 175
+      sideWidth: 1
+      sideLength: 40
+      lifetime: 20
+      pierce: true
+      pierceBuilding: true
+      drawSize: 200
+      damage: 20
+    }
+  }
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: Deprave-
+  //too late to rename now-
+  parts: [
+  {
+    type: RegionPart
+    suffix: -h
+    progress: warmup
+    heatColor: CCFFFF
+    moveX: -4
+    moveY: -4
+    mirror: true
+    under: true
+    children: [
+      {
+        type: RegionPart
+        suffix: -spike1
+        progress: recoil
+        heatProgress: recoil
+        heatColor: CCFFFF
+        moveRot: 20
+        mirror: true
+        under: true
+      }
+     ]
+  }
+  {
+    type: RegionPart
+    suffix: -barrel
+    progress: recoil
+    heatProgress: warmup
+    heatColor: CCFFFF
+    moveY: -0.9
+    mirror: false
+    under: false
+    children: [
+      {
+        type: RegionPart
+        suffix: -tip
+        progress: recoil
+        heatProgress: warmup
+        heatColor: CCFFFF
+        moveY: -1.3
+        mirror: false
+        under: true
+      }
+    ]
+  }
+  {
+    type: RegionPart
+    suffix: -wing
+    progress: warmup
+    heatProgress: warmup
+    heatColor: CCFFFF
+    moveX: -3
+    moveY: 0.7
+    mirror: true
+    under: false
+    children: [
+      {
+        type: RegionPart
+        suffix: -linkage
+        progress: warmup
+        heatProgress: warmup
+        heatColor: CCFFFF
+        moveY: 0.2
+        mirror: true
+        under: true
+      }
+      {
+        type: RegionPart
+        suffix: -h
+        progress: warmup
+        heatColor: CCFFFF
+        moveX: -5
+        moveY: 1
+        moveRot: 60
+        mirror: true
+        under: true
+        children: [
+          {
+            type: RegionPart
+            suffix: -side
+            progress: recoil
+            heatProgress: warmup
+            heatColor: CCFFFF
+            moveY: -1.3
+            mirror: true
+            under: true
+          }
+        ]
+      }
+      {
+        type: RegionPart
+        suffix: -hand
+        progress: recoil
+        heatProgress: warmup
+        heatColor: CCFFFF
+        moveX: -2
+        moveY: 0
+        moveRot: 20
+        mirror: true
+        under: true
+      }
+    ]
+  }
+  {
+    type: RegionPart
+    suffix: -lens
+    progress: warmup
+    heatProgress: warmup
+    heatColor: CCFFFF
+    moveX: 4
+    moveY: 8
+    moveRot: 20
+    mirror: true
+    under: true
+  }
+  {
+    type: RegionPart
+    suffix: -back
+    progress: warmup
+    heatProgress: warmup
+    heatColor: CCFFFF
+    moveX: 0
+    moveY: 0
+    mirror: false
+    under: false
+  }
+  {
+    type: ShapePart
+    progress: warmup
+    rotateSpeed: -3
+    color: ffccff
+    sides: 3
+    hollow: true
+    stroke: 0
+    strokeTo: 1
+    radius: 9
+    y: -15
+    layer: 110
+  }
+  {
+    type: ShapePart
+    progress: warmup
+    rotateSpeed: -3
+    color: ffccff
+    circle: true
+    hollow: true
+    stroke: 0
+    strokeTo: 1
+    radius: 10
+    y: -15
+    layer: 110
+  },
+  {
+    type: HaloPart
+    progress: warmup
+    color: ffccff
+    shapes: 3
+    tri: true
+    triLength: 0
+    triLengthTo: 5
+    shapeRotation: 0
+    haloRotation: 90
+    haloRotateSpeed: 3
+    hollow: true
+    stroke: 0
+    strokeTo: 2
+    radius: 6
+    haloRadius: 10
+    y: -15
+    layer: 110
+  },
+  {
+    type: HaloPart
+    progress: warmup
+    color: ffccff
+    shapes: 2
+    tri: true
+    triLength: 0
+    triLengthTo: 5
+    shapeRotation: 180
+    haloRotation: 90
+    hollow: true
+    stroke: 0
+    strokeTo: 2
+    radius: 5
+    haloRadius: 16
+    y: -15
+    layer: 110
+  },
+  {
+    type: HaloPart
+    progress: warmup
+    color: ffccff
+    shapes: 2
+    tri: true
+    triLength: 0
+    triLengthTo: 20
+    shapeRotation: 0
+    haloRotation: 90
+    hollow: true
+    stroke: 0
+    strokeTo: 2
+    radius: 5
+    y: -15
+    haloRadius: 16
+    layer: 110
+  },
+]
+}
+requirements: [
+  cadmium/1
+]

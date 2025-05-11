@@ -1,0 +1,33 @@
+type: battery
+name: Fragment Battery
+description: Uses Metallic Fragments to store more power, due to the fragment's high energy capacity.
+details: I am begging you, do not lick it!
+size: 3
+	"fullLightColor": "EDCBCBFF",
+	"emptyLightColor": "B066B0FF",
+	"hasPower": true,
+	"outputsPower": true,
+	"consumesPower": true,
+	"hasItems": false,
+canOverdrive: false
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: -top
+    }
+  ]
+}
+consumes: {
+    powerBuffered: 8700
+}
+category: power
+requirements: [
+  lithium/40
+  metallic-frag/35
+  salt/20
+]

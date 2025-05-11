@@ -1,0 +1,212 @@
+"type": PowerTurret,
+"name": Appulse,
+"description": Continuously fires swarms of homing bullets.
+"size": 3,
+"health": 575,
+range: 250,
+rotateSpeed: 2.5,
+minWarmup: 0.99
+warmupMaintainTime: 140
+shootWarmupSpeed: 0.05
+reload: 10
+consumes: {
+  power: 6
+}
+xRand: 1
+shoot: {
+type: ShootPattern
+shots: 3
+shotDelay: 1
+}
+recoilAmount: 3
+shootSound: laser
+shootType: {
+    type: BasicBulletType,
+    sprite: akrehela-energy-spear
+    trailLength: 6
+    trailChance: -1
+    trailInterval: 1
+    trailRotation: true
+    trailEffect: colorSpark
+    inaccuracy: 3
+    pierce: true
+    pierceCap: 3
+    homingPower: 0.01
+    homingRange: 100
+    homingDelay: 20
+    shrinkX: 0
+    shrinkY: 0
+    weaveMag: 7
+    weaveScl: 3
+    speed: 10
+    lifetime: 25
+    damage: 7
+    width: 7
+    height: 14
+    frontColor: 9f9f5f
+    backColor: f9f9c9
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    ammoMultiplier: 2
+    collidesTiles: true
+    explodeRange: 10
+    splashDamageRadius: 10
+    splashDamage: 10
+    hitEffect: pointHit
+    minWarmup: 0.99
+    warmupMaintainTime: 120
+    shootWarmupSpeed: 0.05
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+              type: ParticleEffect
+              particles: 1
+              lifetime: 30
+              length: 10
+              sizeFrom: 2
+              cone: 30
+              sizeTo: 0
+              colorFrom: dfe8eb
+              colorTo: c8dee3
+              strokeFrom: 1
+              strokeTo: 0
+              interp: pow3Out
+              spin: 1
+              sizeInterp: pow3In
+              region: akrehela-steam
+            }
+        ]
+    }
+}
+category: turret
+requirements: [
+  cadmium/150
+  lithium/75
+  iceshard/90
+  carborundum/55
+]
+drawer: {
+  type: DrawTurret
+  basePrefix: Appulse-
+  parts: [
+//runes
+    {
+    type: ShapePart
+    progress: warmup
+    rotateSpeed: -1.5
+    color: ffccff
+    sides: 6
+    hollow: true
+    stroke: 0
+    strokeTo: 1
+    radius: 2
+    radiusTo: 5
+    y: 3.75
+    layer: 110
+  }
+  {
+    type: HaloPart
+    progress: warmup
+    color: ffccff
+    shapes: 6
+    tri: false
+    triLength: 0
+    triLengthTo: 5
+    shapeRotation: 0
+    haloRotation: 90
+    haloRotateSpeed: 1.5
+    hollow: true
+    stroke: 0
+    strokeTo: 1
+    radius: 0
+    radiusTo: 1.5
+    haloRadius: 4
+    haloRadiusTo: 8
+    y: 3.75
+    layer: 110
+  },
+//actual turret parts
+    {
+    type: RegionPart
+    suffix: -barrel
+    progress: recoil
+    heatProgress: warmup
+    moveX: 0
+    moveY: -0.5
+    mirror: false
+    under: true
+    }
+    {
+    type: RegionPart
+    suffix: -blade
+    progress: recoil
+    heatProgress: warmup
+    moveX: 0
+    moveY: -0.4
+    mirror: true
+    under: true
+    moves: [
+      {
+      type: PartMove
+      progress: warmup
+      x: -0.3
+      y: 0.7
+      rot: 10
+      }
+    ]
+    }
+    {
+    type: RegionPart
+    suffix: -wing
+    progress: warmup
+    heatProgress: warmup
+    moveX: -1.5
+    moveY: 0.7
+    mirror: true
+    under: true
+    moves: [
+      {
+      type: PartMove
+      progress: recoil
+      x: 0
+      y: 0
+      rot: 3
+      }
+    ]
+    children: [
+      {
+      type: RegionPart
+      suffix: -back
+      progress: warmup
+      heatProgress: warmup
+      moveX: 0
+      moveY: -0.8
+      moveRot: 10
+      mirror: true
+      under: false
+      }
+      {
+      type: RegionPart
+      suffix: -side
+      progress: warmup
+      heatProgress: warmup
+      moveX: 0.8
+      moveY: -1.6
+      mirror: true
+      under: false
+      }
+    ]
+    }
+  ]
+}
+research: {
+    parent: "Dart",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "basin"
+        }
+    ]
+}
+researchCostMultiplier: 5.8

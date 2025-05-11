@@ -1,0 +1,82 @@
+  "name": "Carborundum Blast Kiln",
+  "type": "HeatCrafter",
+  "description": "Grows carborundum plates by superheating Keatite and mixing it with Chlorine, then blasting it onto a metal plate.",
+  "details": "Nice, warm, 2,400 degrees Celsius breeze",
+  "health": 340,
+  "size": 4,
+  "squareSprite": false,
+  "hasItems": true,
+  "craftTime": 130,
+  "craftEffect": "none",
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+	{
+          "type": "DrawDefault"
+        }
+        {
+          "type": "DrawHeatInput"
+        }
+	{
+	  "type": "DrawGlowRegion",
+	  "suffix": "-top",
+	  "glowScale": 8,
+	  "color": "FFFFB1"
+	}
+        {
+         "type": "DrawFlame",
+    "flameRadius": 4.2,
+    "flameRadiusIn": 1.0,
+    "flameRadiusScl": 3.5,
+    "flameRadiusMag": 2.0,
+    "flameRadiusInMag": 1.0,
+	"flameColor": "ff8400"
+	  },
+    ]
+    },
+  "hasPower": true,
+  "hasLiquids": true,
+  "updateEffect": "none",
+  "consumes": {
+    "power": 2.2
+    "items": [
+      "keatite/2"
+      "sodium/1"
+    ],
+    "liquids": [
+      "liquid-chlorine/0.6"
+    ]
+  },
+  "requirements": [
+    cadmium/145
+    carborundum/90
+    metallic-frag/25
+    salt/80
+  ],
+"updateEffect": {
+    type: RadialEffect
+    layer: 118
+    rotationSpacing: 60
+    amount: 1
+    lengthOffset: 2
+    effect: {
+      particles: 3
+      length: 90
+      lifetime: 400
+      cone: 20
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 0
+      sizeTo: 12
+      colorFrom: ffb36199
+      colorTo: 46454300
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 111
+    }
+  }
+  "category": "crafting",
+  "outputItems": [
+    "carborundum/4"
+    "carbon/2"
+  ]

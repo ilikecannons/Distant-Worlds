@@ -1,0 +1,77 @@
+  "type": "HeatCrafter",
+  "health": 280,
+  "size": 3,
+  "squareSprite": false,
+  "hasItems": true,
+  "craftTime": 95,
+  "craftEffect": {
+    type: RadialEffect
+    layer: 118
+    rotationSpacing: 60
+    amount: 2
+    lengthOffset: 6
+    effect: {
+      particles: 1
+      length: 120
+      lifetime: 500
+      cone: 20
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 0
+      sizeTo: 12
+      colorFrom: d0e0e066
+      colorTo: b0c0c000
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 111
+    }
+  }
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+        {
+       "type": "DrawRegion",
+       "suffix": "-bottom"
+	},
+        {
+        "type": "DrawLiquidRegion"
+        suffix: -liquid
+        drawLiquid: water
+        }
+        {
+          type: DrawRegion
+          suffix: -rotator
+          rotateSpeed: 8
+	  layerOffset: 1
+          spinSprite: true
+        }
+	{
+          "type": "DrawDefault"
+        },
+        {
+	  type: DrawGlowRegion
+	  suffix: -top
+          color: ffffff
+          layerOffset: 2
+        }
+    ]
+    },
+  "hasPower": true,
+  "hasLiquids": true,
+  "updateEffect": "none",
+  "heatRequirement": 6,
+  "consumes": {
+    "power": 0.9
+    "liquids": [
+      "cryofluid/0.75"
+    ]
+
+  },
+  "requirements": [
+    cadmium/50
+    carborundum/20
+    iceshard/25
+    lithium/35
+  ],
+  "category": "crafting",
+  "outputLiquid": "water/0.4"

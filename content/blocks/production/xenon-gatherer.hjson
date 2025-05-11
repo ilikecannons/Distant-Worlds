@@ -1,0 +1,67 @@
+  "name": "Xenon Concentrator",
+  "type": "GenericCrafter",
+  "description": "Takes xenon straight out of the atmosphere",
+  "health": 210,
+  "size": 2,
+  "squareSprite": true,
+  "hasItems": false,
+  "craftTime": 120,
+  "craftEffect": "none",
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+        {
+       "type": "DrawRegion",
+       "suffix": "-bottom"
+	},
+        {
+        "type": "DrawLiquidRegion"
+        suffix: -liquid
+        drawLiquid: liquid-xenon
+        }
+	{
+          "type": "DrawDefault"
+        },
+        {
+	  "type": "DrawGlowRegion",
+	  "suffix": "-top",
+	  "glowScale": 8,
+	  "color": "FFFFFF"
+	}
+        {
+         "type": "DrawFlame",
+    "flameRadius": 3.2,
+    "flameRadiusIn": 1.0,
+    "flameRadiusScl": 3.5,
+    "flameRadiusMag": 2.0,
+    "flameRadiusInMag": 1.0,
+	"flameColor": "ff84ff"
+        }
+	  {
+        "type": "DrawParticles",
+        "color": "FFB1FFFF",
+    "alpha": 0.4,
+    "blending": "additive",
+    "particleSize": 1,
+    "reverse": false,
+    "particleRad": 13,
+    "particles": 16,
+    "fadeMargin": 1,
+    "rotateScl": 7,
+    "particleLife": 60
+    },
+    ]
+    },
+  "hasPower": true,
+  "hasLiquids": true,
+  "updateEffect": "none",
+  "consumes": {
+    "power": 0.8
+  },
+  "requirements": [
+    cadmium/40
+    carbon/65
+    salt/16
+  ],
+  "category": "crafting",
+  "outputLiquid": "liquid-xenon/0.4"

@@ -1,0 +1,32 @@
+type: Reconstructor
+name: Prime Reconstructor
+description: Make them better, stronger, and faster! make them MORE!!!
+size: 5
+health: 1500
+constructTime: 2000
+liquidCapacity: 120
+consumes: {
+  power: 2
+    items: {
+      items: [
+        cadmium/60
+        gold/25
+        lithium/100
+        carborundum/30
+      ]
+    }
+}
+upgrades: [
+  [cflare-2, cflare-3]
+  [mech-2, mech-3]
+  [cspider-2, cspider-3]
+  [sflare-2, sflare-3]
+]
+requirements: [
+  cadmium/115
+  lithium/45
+  iceshard/35
+  gold/30
+  carborundum/85
+]
+category: units

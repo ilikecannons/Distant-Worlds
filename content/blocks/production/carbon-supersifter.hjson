@@ -1,0 +1,73 @@
+  "name": "Carbonic Force Sieve",
+  "type": "GenericCrafter",
+  "description": "Sifts through sand to find any carbon impurities.",
+  "details": "but better!",
+  "health": 325,
+  "size": 4,
+  "squareSprite": false,
+  "hasItems": true,
+  "craftTime": 80,
+  "craftEffect": "smeltsmoke",
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+        {
+          "type": "DrawRegion",
+          "suffix": "-bottom",
+        }
+        {
+          "type": "DrawLiquidRegion"
+          suffix: -liquid
+          drawLiquid: water
+        }
+        {
+          type: DrawRegion
+          suffix: -rotator
+          rotateSpeed: 5
+          spinSprite: true
+	  layerOffset: 1
+        }
+        {
+          type: DrawRegion
+          suffix: -rotator
+          rotateSpeed: 7
+          spinSprite: true
+	  layerOffset: 1
+        }
+	{
+          "type": "DrawDefault"
+        },
+        {
+	  "type": "DrawGlowRegion",
+	  "suffix": "-top",
+	  "glowScale": 8,
+	  "color": "FFFFB1"
+	}
+        {
+	  "type": "DrawGlowRegion",
+	  "suffix": "-top2",
+	  "glowScale": 9,
+	  "color": "FFFFB1"
+	}
+    ]
+    },
+  "hasPower": true,
+  "hasLiquids": true,
+  "updateEffect": "none",
+  "consumes": {
+    "power": 1.2,
+    "items": [
+      "redsand/5"
+    ],
+    "liquids": [
+      "water/0.45"
+    ]
+  },
+  "requirements": [
+    cadmium/160
+  ],
+  "category": "crafting",
+  "outputItems": [
+    carbon/4
+    cadmium/1
+  ]

@@ -1,0 +1,80 @@
+  "name": "Sand Purifier",
+  "type": "GenericCrafter",
+  "description": "Purifies Red Sand, extracting the things in it.",
+  "health": 165,
+  "size": 3,
+  "squareSprite": false,
+  "hasItems": true,
+  "craftTime": 100,
+  "craftEffect": "smeltsmoke",
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+	{
+          "type": "DrawDefault"
+        },
+	{
+	  "type": "DrawGlowRegion",
+	  "suffix": "-top",
+	  "glowScale": 8,
+	  "color": "FFFFB1"
+	}
+	{
+      "type": "DrawParticles",
+      "color": "80FFFFFF",
+      "alpha": 0.4,
+      "reverse": true,
+      "blending": "additive",
+      "particleSize": 2,
+      "particleRad": 8,
+      "particles": 12,
+      "fadeMargin": 1,
+      "rotateScl": 7,
+      "particleLife": 200
+      "region": akrehela-triangle
+     },
+     {
+     "type": "DrawFlame",
+     "flameRadius": 2.7,
+     "flameRadiusIn": 1.0,
+     "flameRadiusScl": 4,
+     "flameRadiusMag": 2.0,
+     "flameRadiusInMag": 1.0,
+     "flameColor": "5ff0ff"
+     },
+    ]
+    },
+  "hasPower": true,
+  "hasLiquids": false,
+  "updateEffect": "none",
+  "consumes": {
+    "power": 0.4
+    "items": [
+      "redsand/2"
+    ],
+
+  },
+  "requirements": [
+    carborundum/55
+    quartz/20
+    iceshard/40
+  ],
+  research: {
+    parent: keatrine-mixer,
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "transport-cove"
+        }
+    ]
+  }
+  researchCost: [
+    cadmium/110
+    quartz/40
+    iceshard/80
+  ]
+  "category": "crafting",
+  "outputItems": [
+    "cadmium/1"
+    "purifiedsand/2"
+  ]

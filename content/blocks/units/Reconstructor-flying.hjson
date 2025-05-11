@@ -1,0 +1,39 @@
+name: Flying Units Reconstructor
+description: Upgrades flying units.
+type: Reconstructor
+size: 3
+health: 1200
+constructTime: 1500
+liquidCapacity: 60
+consumes: {
+  power: 2
+    items: {
+      items: [
+        cadmium/85
+        carborundum/40
+      ]
+    }
+  liquid: {
+    liquid: water
+    amount: 0.6
+  }
+}
+upgrades: [
+  [cflare-1, cflare-2]
+]
+requirements: [
+  cadmium/115
+  lithium/15
+  carborundum/75
+]
+research: {
+  parent: Constructor-flying,
+  objectives: [
+    {
+      type: "OnSector",
+      preset: "isles"
+    }
+  ]
+}
+researchCostMultiplier: 1
+category: units

@@ -1,0 +1,66 @@
+"type": ItemTurret,
+"size": 4,
+"health": 1600,
+range: 350,
+rotateSpeed: 2,
+reload: 125
+recoilAmount: 3
+shootSound: mediumCannon
+velocityRnd: 0.2
+shoot: {
+  type: ShootPattern
+  shots: 4
+  shotDelay: 0
+}
+ammoTypes: {
+  metallic-frag: {
+      type: BasicBulletType
+    buildingDamageMultiplier: 0.25
+    inaccuracy: 5
+    despawnShake: 8
+    hitColor: f2b1b1
+    hitSound: largeCannon
+    damage: 40
+    splashDamage: 140
+    splashDamageRadius: 65
+    width: 14
+    height: 12
+    speed: 4
+    lifetime: 80
+    despawnHit: true
+    despawnEffect: [scatheExplosion]
+    hitEffect: [scatheExplosion]
+    pierceCap: 1
+    pierce: true
+    collidesAir: true
+    collidesGround: true
+    collides: true
+    collidesTiles: true
+    trailColor: f2b1b1
+    trailEffect: none
+    trailChance: 0.6
+    trailInterval: 1
+    trailRotation: true
+    trailLength: 18
+    trailWidth: 2.8
+    "fragVelocityMin": 1,
+      "fragVelocityMax": 3,
+      "fragBullets": 4,
+      "fragBullet": {
+        "speed": 3,
+        "collidesTiles": false,
+        "damage": 9,
+        "width": 6,
+        "heigth": 6,
+        lifetime: 9
+        despawnHit: true
+    }
+   }
+}
+category: turret
+requirements: [
+  cadmium/80
+  carborundum/25
+  metallic-frag/16
+  gold/60
+]

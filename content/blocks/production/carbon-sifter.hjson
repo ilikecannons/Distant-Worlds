@@ -1,0 +1,51 @@
+  "name": "Carbon Sifter",
+  "type": "GenericCrafter",
+  "description": "Sifts through sand to find any carbon impurities.",
+  "health": 165,
+  "size": 2,
+  "squareSprite": false,
+  "hasItems": true,
+  "craftTime": 80,
+  "craftEffect": "smeltsmoke",
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+	{
+          "type": "DrawDefault"
+        },
+        {
+          type: DrawRegion
+          suffix: -rotator
+          rotateSpeed: 5
+          spinSprite: true
+	  layerOffset: 1
+        }
+        
+    ]
+    },
+  "hasPower": false,
+  "hasLiquids": false,
+  "updateEffect": "none",
+  "consumes": {
+    "items": [
+      "redsand/3"
+    ],
+
+  },
+  "requirements": [
+    cadmium/35
+  ],
+  research: {
+    parent: akrehela-Power,
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "crash-site"
+        }
+    ]
+  }
+  researchCost: [
+    cadmium/80
+  ]
+  "category": "crafting",
+  "outputItem": "carbon/2"

@@ -1,0 +1,23 @@
+  "type": "Constructor",
+  "name": "Advanced Component Assembler",
+  "description": "makes bigger stuff",
+  "health": 860,
+  "size": 5,
+  "hasItems": true,
+  "craftEffect": "none",
+  "hasPower": true,
+  "updateEffect": "none",
+  minBlockSize: 1
+  maxBlockSize: 4
+  "consumes": {
+  "power": 2.1
+  "liquids": [
+      "cryofluid/0.8",
+    ]
+  }
+  "requirements": [
+    cadmium/85
+    carborundum/40
+    lithium/30
+  ],
+  "category": "units"

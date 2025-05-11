@@ -1,0 +1,75 @@
+  "type": "GenericCrafter",
+  "health": 165,
+  "size": 2,
+  "squareSprite": false,
+  "hasItems": true,
+  "craftTime": 80,
+  "craftEffect": "smeltsmoke",
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+        {
+       "type": "DrawRegion",
+       "suffix": "-bottom"
+	},
+        {
+        "type": "DrawLiquidRegion"
+        suffix: -liquid-1
+        drawLiquid: water
+        }
+	{
+        "type": "DrawLiquidRegion"
+        suffix: -liquid-2
+        drawLiquid: cryofluid
+        }
+	{
+          "type": "DrawDefault"
+        },
+        {
+          type: DrawRegion
+          suffix: -rotator
+          rotateSpeed: 5
+	  layerOffset: 1
+          spinSprite: true
+        }
+        {
+	  type: DrawGlowRegion
+	  suffix: -top
+          layerOffset: 2
+        }
+    ]
+    },
+  "hasPower": true,
+  "hasLiquids": true,
+  "updateEffect": "none",
+  "consumes": {
+    "power": 0.5
+    "items": [
+      "iceshard/2"
+    ],
+    "liquids": [
+      "water/0.5"
+    ]
+
+  },
+  "requirements": [
+    cadmium/35
+    carbon/16
+    iceshard/20
+  ],
+  research: {
+    parent: sodium-extractor,
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "transport-cove"
+        }
+    ]
+  }
+  researchCost: [
+    cadmium/216
+    carbon/116
+    iceshard/16
+  ]
+  "category": "crafting",
+  "outputLiquid": "cryofluid/0.6"

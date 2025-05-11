@@ -1,0 +1,77 @@
+"type": ItemTurret,
+"name": Abate,
+"description": Utilizes graviton technology to release arcs of pure energy.
+"size": 3,
+"health": 1560,
+range: 230,
+rotateSpeed: 3,
+reload: 15
+burstSpacing: 1
+shots: 1
+xRand: 1
+recoilAmount: 3
+shootSound: spark
+heatRequirement: 5
+shoot: {
+type: ShootPattern
+shots: 2
+shotDelay: 0
+}
+ammoTypes: {
+  carborundum: {
+    type: LightningBulletType
+  ammoMultiplier: 3
+  hitSound: spark
+  damage: 20
+  lightningLength: 30
+  lightningLengthRand: 9
+  lightningColor: 42D4AA
+  status: shocked
+  statusDuration: 150
+  chargeEffect: lightningCharge
+  buildingDamageMultiplier: 0.4
+
+  }
+}
+category: turret
+requirements: [
+  cadmium/45
+  carborundum/10
+  iceshard/25
+]
+drawer: {
+  type: DrawTurret
+  basePrefix: Cicada-
+  parts: [
+    {
+    type: RegionPart
+    suffix: -body
+    progress: recoil
+    heatProgress: warmup
+    heatColor: CCFFEE
+    moveY: -0.7
+    mirror: false
+    under: true
+    }
+    {
+    type: RegionPart
+    suffix: -floaty1
+    progress: warmup
+    heatProgress: warmup
+    heatColor: CCFFEE
+    moveX: -1
+    mirror: true
+    under: false
+    }
+  ]
+}
+research: {
+    parent: "Dart",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "golden-island"
+        }
+    ]
+}
+researchCostMultplier: 1.8

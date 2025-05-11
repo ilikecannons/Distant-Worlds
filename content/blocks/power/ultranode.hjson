@@ -1,0 +1,15 @@
+type: PowerNode
+name: Electromagnetic Distortion Channel
+description: An extremely powerful electronic node.
+size: 3
+maxNodes: 3
+laserRange: 65
+laserColor1: 99ffff
+laserColor2: 00d9ff
+category: power
+requirements: [
+  carbon/50
+  carborundum/40
+  salt/25
+  diamond/30
+]

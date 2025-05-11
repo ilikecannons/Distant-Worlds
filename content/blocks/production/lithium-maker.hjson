@@ -1,0 +1,83 @@
+  "name": "Lithium Refinery",
+  "type": "HeatCrafter",
+  "description": "makes lithium and chlorine",
+  "health": 165,
+  "size": 3,
+  "squareSprite": false,
+  "hasItems": true,
+  "craftTime": 100,
+  "craftEffect": "smeltsmoke",
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+        {
+          "type": "DrawRegion",
+          "suffix": "-bottom"
+	},
+        {
+          "type": "DrawLiquidRegion"
+          suffix: -liquid
+          drawLiquid: liquid-chlorine
+        }
+        {	
+          "type": "DrawPistons"
+          suffix: -piston1
+          sinMag: 9
+          sinScl: 8
+          angleOffset: 45
+          sides: 4
+	}
+	{
+          "type": "DrawDefault"
+        },
+	{
+	  "type": "DrawGlowRegion",
+	  "suffix": "-top",
+	  "glowScale": 8,
+	  "color": "FFFFB1"
+	}
+	{
+      "type": "DrawParticles",
+      "color": "B1FFFFFF",
+      "alpha": 0.2,
+      "reverse": true,
+      "blending": "additive",
+      "particleSize": 2,
+      "particleRad": 8,
+      "particles": 12,
+      "fadeMargin": 1,
+      "rotateScl": 7,
+      "particleLife": 120
+     },
+        
+    ]
+    },
+  "hasPower": true,
+  "hasLiquids": true
+  "updateEffect": "none",
+  "heatRequirement": 3,
+  "liquidCapacity": 16,
+  "consumes": {
+    "items": [
+      "lithiumsand/2"
+    ],
+
+  },
+  "requirements": [
+    cadmium/60
+    carborundum/25
+    quartz/40
+  ],
+  research: {
+    parent: sodium-extractor,
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "secret-pass"
+        }
+    ]
+  }
+  researchCostMultiplier: 3
+  "category": "crafting",
+  "outputItem": "lithium/1",
+  "outputLiquid": "liquid-chlorine/0.2"

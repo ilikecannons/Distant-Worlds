@@ -1,0 +1,92 @@
+type: ConsumeGenerator
+name: Keatric Reactor
+description: Uses the diffusion of different temperatures to create energy or something like that. I wouldn't know, maybe it's black magic?
+size: 3
+hasLiquids: true
+liquidCapacity: 60
+canOverdrive: false
+itemDuration: 180
+baseExplosiveness: 0
+ambientSound: cutter
+ambientSoundVolume: 0.3
+"drawer": {
+  "type": "DrawMulti",
+        "drawers": [
+        {
+       "type": "DrawRegion",
+       "suffix": "-bottom"
+	   },
+        {
+        "type": "DrawLiquidTile",
+        "drawLiquid": "liquid-keatrine",
+        "suffix": "-liquid"
+        },
+        {	
+        "type": "DrawPistons"
+        suffix: -piston1
+        sinMag: 5
+        sinScl: 10
+        sides: 2
+	}
+        {	
+        "type": "DrawPistons"
+        suffix: -piston1
+        sinMag: 5
+        sinScl: 10
+        sides: 2
+        sinOffset: 0
+        angleOffset: 90
+	}
+        {	
+        "type": "DrawDefault"
+	}
+        {
+	  "type": "DrawGlowRegion",
+	  "suffix": "-top",
+	  "glowScale": 8,
+	  "color": "DEFFFF55"
+	}
+    ]
+    },
+consumes: {
+    "items": [
+      sodium/1
+    ]
+    liquids: [
+      liquid-keatrine/0.25
+    ]
+}
+generateEffectRange: 2
+effectChance: 0.025
+generateEffect: {
+    type: RadialEffect
+    layer: 118
+    rotationSpacing: 60
+    amount: 4
+    lengthOffset: 6
+    effect: {
+      particles: 1
+      length: 90
+      lifetime: 400
+      cone: 30
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 0
+      sizeTo: 18
+      colorFrom: e0e0e044
+      colorTo: e0e0e000
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 111
+    }
+  }
+outputLiquid: water/0.25
+powerProduction: 10.5
+category: power
+requirements: [
+  cadmium/210
+  carbon/130
+  carborundum/150
+  lithium/100
+  
+]

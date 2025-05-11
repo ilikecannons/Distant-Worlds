@@ -1,0 +1,74 @@
+  "name": "Sodium Extractor",
+  "type": "GenericCrafter",
+  "description": "Extracts Sodium from Cryofluid. The sodium is extremely cold, do not touch.",
+  "health": 165,
+  "size": 3,
+  "squareSprite": false,
+  "hasItems": true,
+  "craftTime": 100,
+  "craftEffect": "smeltsmoke",
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+	{
+          "type": "DrawDefault"
+        },
+	{
+	  "type": "DrawGlowRegion",
+	  "suffix": "-top",
+	  "glowScale": 8,
+	  "color": "FFFFB1"
+	}
+        {
+          type: DrawRegion
+          suffix: -rotator
+          rotateSpeed: -7
+	  layerOffset: 1
+        }
+	{
+      "type": "DrawParticles",
+      "color": "FFFFB1FF",
+      "alpha": 0.4,
+      "reverse": true,
+      "blending": "additive",
+      "particleSize": 2,
+      "particleRad": 8,
+      "particles": 12,
+      "fadeMargin": 1,
+      "rotateScl": 7,
+      "particleLife": 120
+     },
+        
+    ]
+    },
+  "hasPower": true,
+  "hasLiquids": false,
+  "updateEffect": "none",
+  "consumes": {
+    "power": 0.6
+    "liquids": [
+      "cryofluid/0.6"
+    ],
+
+  },
+  "requirements": [
+    cadmium/55
+    quartz/20
+    iceshard/40
+  ],
+  research: {
+    parent: akrehela-Production,
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "cryoo-lake"
+        }
+    ]
+  }
+  researchCost: [
+    cadmium/110
+    quartz/40
+    iceshard/80
+  ]
+  "category": "crafting",
+  "outputItem": "sodium/2"

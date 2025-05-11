@@ -1,0 +1,44 @@
+Type: UnitAssembler
+name: Support Assembler
+description: Assembles support units.
+health: 3250
+size: 5
+plans: [
+  {
+  unit: sflare-4
+  requirements: [
+    akrehela-sflare-1/3
+    akrehela-Abate/3
+    akrehela-carborundum-wall-large/8
+  ]
+  time: 1800
+  }
+  {
+  unit: sflare-5
+  requirements: [
+    akrehela-sflare-2/3
+    akrehela-Cicada/3
+    akrehela-Appulse/2
+    akrehela-frag-wall/14
+  ]
+  time: 2200
+  }
+]
+areaSize: 11
+dronesCreated: 4
+consumes: {
+power: 6.5
+  liquid: {
+    liquid: liquid-xenon
+    amount: 1.8
+  }
+}
+category: units
+requirements: [
+  sodium/1650
+  carborundum/1820
+  cadmium/2000
+  lithium/1490
+  diamond/1100
+  metallic-frag/850
+]

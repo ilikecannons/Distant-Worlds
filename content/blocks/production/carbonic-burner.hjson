@@ -1,0 +1,44 @@
+type: HeatProducer
+name: Cabronic Burner
+description: Burns Carbon for heat.
+details: You cold?
+size: 2
+category: crafting
+requirements: [
+  cadmium/40
+  sodium/25
+  carborundum/16
+]
+heatOutput: 3
+consumes: {
+  "power": 0.45
+  "items": [
+    carbon/1
+  ]
+}
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawHeatOutput
+      heatColor: 641616FF
+    }
+  ]
+}
+  research: {
+    parent: sodium-extractor,
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "secret-pass"
+        }
+    ]
+  }
+  researchCost: [
+    cadmium/120
+    sodium/75
+    carborundum/48
+  ]

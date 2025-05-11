@@ -1,0 +1,18 @@
+type: PowerNode
+name: Large Electronic Node
+description: Allows energy to travel using directional electromagnetic fields.
+size: 2
+maxNodes: 16
+laserRange: 25
+laserColor1: 99ffff
+laserColor2: 00d9ff
+category: power
+requirements: [
+  carbon/12
+  carborundum/6
+]
+research: cadmiumnode
+researchCost: [
+    carbon/72
+    carborundum/36
+    ]

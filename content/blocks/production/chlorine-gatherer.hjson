@@ -1,0 +1,72 @@
+  "type": "HeatCrafter",
+  "health": 285,
+  "size": 3,
+  "squareSprite": false,
+  "hasItems": true,
+  "craftTime": 120,
+  "craftEffect": "none",
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+        {
+       "type": "DrawRegion",
+       "suffix": "-bottom"
+	},
+        {
+        "type": "DrawLiquidRegion"
+        suffix: -liquid
+        drawLiquid: liquid-chlorine
+        }
+        {
+          type: DrawRegion
+          suffix: -rotator1
+          rotateSpeed: 1.5
+	  layerOffset: 1
+        }
+        {
+          type: DrawRegion
+          suffix: -rotator2
+          rotateSpeed: -1.5
+	  layerOffset: 1
+        }
+	{
+          "type": "DrawDefault"
+        },
+        {
+	  "type": "DrawGlowRegion",
+	  "suffix": "-top",
+	  "glowScale": 8,
+	  "color": "FFFFFF"
+	}
+
+	  {
+        "type": "DrawParticles",
+        "color": "B1FFB1FF",
+    "alpha": 0.4,
+    "blending": "additive",
+    "particleSize": 1,
+    "reverse": false,
+    "particleRad": 13,
+    "particles": 16,
+    "fadeMargin": 1,
+    "rotateScl": 7,
+    "particleLife": 60
+    },
+    ]
+    },
+  "hasPower": true,
+  "hasLiquids": true,
+  "updateEffect": "none",
+  "heatRequirement": 4,
+  "consumes": {
+    "items": [
+      "lithium/1"
+    ],
+  },
+  "requirements": [
+    cadmium/40
+    carbon/65
+    salt/16
+  ],
+  "category": "crafting",
+  "outputLiquid": "liquid-chlorine/0.6"

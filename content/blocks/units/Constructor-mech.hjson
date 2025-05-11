@@ -1,0 +1,36 @@
+name: Mech Constructor
+description: Makes mechs.
+type: UnitFactory
+health: 800
+size: 3
+consumes: {
+  power: 1.3
+}
+plans: [
+  {
+    unit: mech-1
+    time: 1200
+    requirements: [
+      cadmium/35
+      iceshard/10
+    ]
+  }
+]
+requirements: [
+  cadmium/55
+  quartz/25
+]
+category: units
+research: {
+    parent: "akrehela-Units",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "crash-site"
+        }
+    ]
+}
+researchCost: [
+    cadmium/90
+    quartz/60
+  ]

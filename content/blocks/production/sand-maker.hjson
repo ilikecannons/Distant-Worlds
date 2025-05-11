@@ -1,0 +1,107 @@
+  "name": "Sand Quern",
+  "type": "HeatCrafter",
+  "description": "Makes Red Sand out of Lithium, Cadmium and heat.",
+  "health": 165,
+  "size": 3,
+  "squareSprite": false,
+  "hasItems": true,
+  "craftTime": 90,
+  "craftEffect": "smeltsmoke",
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+        {
+          "type": "DrawRegion",
+          "suffix": "-bottom"
+	},
+        {
+          type: DrawRegion
+          suffix: -cogwheel
+          rotateSpeed: -4
+	  layerOffset: 1
+          x: 8
+          y: 0
+          spinSprite: true
+        }
+        {
+          type: DrawRegion
+          suffix: -cogwheel
+          rotateSpeed: -4
+	  layerOffset: 1
+          x: 0
+          y: 8
+          spinSprite: true
+        }
+        {
+          type: DrawRegion
+          suffix: -cogwheel
+          rotateSpeed: -4
+	  layerOffset: 1
+          x: -8
+          y: 0
+          spinSprite: true
+        }
+        {
+          type: DrawRegion
+          suffix: -cogwheel
+          rotateSpeed: -4
+	  layerOffset: 1
+          x: 0
+          y: -8
+          spinSprite: true
+        }
+	{
+          "type": "DrawDefault"
+        },
+	{
+	  "type": "DrawGlowRegion",
+	  "suffix": "-top",
+	  "glowScale": 8,
+	  "color": "FFFFB1"
+	}
+	{
+      "type": "DrawParticles",
+      "color": "B1FFFFFF",
+      "alpha": 0.2,
+      "reverse": true,
+      "blending": "additive",
+      "particleSize": 2,
+      "particleRad": 8,
+      "particles": 12,
+      "fadeMargin": 1,
+      "rotateScl": 7,
+      "particleLife": 120
+     },
+        
+    ]
+    },
+  "hasPower": true,
+  "hasLiquids": true
+  "updateEffect": "none",
+  "heatRequirement": 5,
+  "liquidCapacity": 16,
+  "consumes": {
+    "items": [
+      "lithium/2"
+      "cadmium/1"
+    ],
+
+  },
+  "requirements": [
+    cadmium/95
+    carborundum/40
+    iceshard/60
+    lithium/35
+  ],
+  research: {
+    parent: lithium-maker,
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "isles"
+        }
+    ]
+  }
+  researchCostMultiplier: 2.5
+  "category": "crafting",
+  "outputItem": "redsand/2",

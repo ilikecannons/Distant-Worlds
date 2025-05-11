@@ -1,0 +1,45 @@
+type: battery
+name: Sodium Battery
+description: Stores energy for later use.
+details: Do not lick it.
+size: 2
+	"fullLightColor": "EDEDCBFF",
+	"emptyLightColor": "B0B066FF",
+	"hasPower": true,
+	"outputsPower": true,
+	"consumesPower": true,
+	"hasItems": false,
+canOverdrive: false
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: -top
+    }
+  ]
+}
+consumes: {
+    powerBuffered: 1500
+}
+category: power
+requirements: [
+  sodium/20
+  carbon/30
+]
+research: {
+    parent: "cadmiumnode",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "cryoo-lake"
+        }
+    ]
+},
+researchCost: [
+    sodium/100
+    carbon/150
+    ]

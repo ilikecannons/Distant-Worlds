@@ -1,0 +1,103 @@
+"type": ItemTurret,
+"name": Sear,
+"description": BIG GUN RUN AAAAA
+"size": 5,
+"health": 2170,
+rotateSpeed: 1,
+reload: 160
+burstSpacing: 1
+shots: 1
+shootWarmupSpeed: 0.04
+minWarmup: 0.9
+shootCone: 1
+xRand: 1
+range: 800
+recoilAmount: 8
+shootSound: missileLaunch
+accurateDelay: false
+shootCone: 1
+ammoPerShot: 15
+ammoTypes: {
+  sodium: {
+    ammoMultiplier: 1
+    displayAmmoMultiplier: false
+    spawnUnit: missile-cryo
+  }
+  salt: {
+    ammoMultiplier: 1
+    displayAmmoMultiplier: false
+    spawnUnit: missile-salt
+  }
+  metallic-frag: {
+    ammoMultiplier: 1
+    displayAmmoMultiplier: false
+    spawnUnit: missile-frag
+  }
+}
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+              type: ParticleEffect
+              particles: 2
+              lifetime: 40
+              length: 20
+              sizeFrom: 3
+              sizeTo: 1
+              colorFrom: b2afb3
+              colorTo: d5d2d6
+              strokeFrom: 1
+              strokeTo: 1
+              interp: pow3Out
+              spin: 1
+              sizeInterp: pow2In
+              region: akrehela-shell
+            }
+        ]
+    }
+category: turret
+requirements: [
+  cadmium/100
+  carborundum/30
+  iceshard/60
+  diamond/55
+]
+drawer: {
+  type: DrawTurret
+  basePrefix: sear-
+  parts: [
+    {
+    type: RegionPart
+    suffix: -barrel
+    progress: warmup
+    heatProgress: warmup
+    heatColor: CCFFFF
+    moveY: -0.3
+    mirror: false
+    under: false
+    }
+    {
+    type: RegionPart
+    suffix: -missile
+    progress: reload
+    colorTo: 00000000
+    color: ffffff
+    outline: false
+    under: true
+    mirror: false
+    layerOffset: 0.01
+    y: 0
+    }
+    {
+    type: RegionPart
+    suffix: -side
+    progress: warmup
+    heatProgress: warmup
+    heatColor: CCFFFF
+    moveRot: 20
+    moveY: -5
+    mirror: true
+    under: false
+    }
+  ]
+}

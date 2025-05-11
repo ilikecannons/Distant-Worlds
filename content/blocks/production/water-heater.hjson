@@ -1,0 +1,86 @@
+"name": "Heater",
+  "type": "GenericCrafter",
+  "description": "Melts ice crystals",
+  "health": 200,
+  "size": 2,
+  "squareSprite": true,
+  "hasItems": true,
+  "craftTime": 90,
+  "craftEffect": {
+    type: RadialEffect
+    layer: 118
+    rotationSpacing: 60
+    amount: 4
+    lengthOffset: 6
+    effect: {
+      particles: 6
+      length: 90
+      lifetime: 400
+      cone: 20
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 0
+      sizeTo: 12
+      colorFrom: d0e0e066
+      colorTo: b0c0c000
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 111
+    }
+  }
+
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+	
+        {
+          "type": "DrawRegion",
+          "suffix": "-bottom"
+	},
+        {
+          "type": "DrawLiquidRegion"
+          suffix: -liquid
+          drawLiquid: water
+        }
+        {
+          "type": "DrawDefault"
+        },
+        {
+	  "type": "DrawGlowRegion",
+	  "suffix": "-top",
+	  "glowScale": 9,
+	  "color": "ffc7c766"
+	}
+        
+    ]
+    },
+  "hasPower": true,
+  "hasLiquids": true,
+  "updateEffect": "none",
+  "consumes": {
+    "power": 0.55
+    "items": [
+      "iceshard/2"
+    ],
+  },
+  "requirements": [
+    cadmium/60
+    carbon/15
+    quartz/45
+  ],
+  research: {
+    parent: sodium-extractor,
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "cryoo-lake"
+        }
+    ]
+  }
+  researchCost: [
+    cadmium/135
+    carbon/40
+    quartz/105
+  ]
+  "category": "crafting",
+  "outputLiquid": "water/0.65"

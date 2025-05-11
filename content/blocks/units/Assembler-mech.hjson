@@ -1,0 +1,43 @@
+Type: UnitAssembler
+name: Mech Units Assembler
+description: Assembles mechs.
+health: 3250
+size: 5
+plans: [
+  {
+  unit: mech-4
+  requirements: [
+    akrehela-mech-1/3
+    akrehela-Cicada/3
+    akrehela-gold-wall-large/8
+  ]
+  time: 1800
+  }
+  {
+  unit: mech-5
+  requirements: [
+    akrehela-mech-2/3
+    akrehela-Bereave/1
+    akrehela-frag-wall/7
+  ]
+  time: 2200
+  }
+]
+areaSize: 11
+dronesCreated: 4
+consumes: {
+power: 6.5
+  liquid: {
+    liquid: liquid-xenon
+    amount: 1.8
+  }
+}
+category: units
+requirements: [
+  sodium/1650
+  carborundum/1820
+  cadmium/2000
+  lithium/1490
+  diamond/1100
+  metallic-frag/850
+]

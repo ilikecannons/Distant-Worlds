@@ -1,0 +1,98 @@
+  "type": "GenericCrafter",
+  "health": 165,
+  "size": 3,
+  "name": "Freezer",
+  "description": "freezes water.",
+  "details": "What did you think it would do?",
+  "squareSprite": false,
+  "hasItems": true,
+  "craftTime": 80,
+  "craftEffect": "none",
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+        {
+       "type": "DrawRegion",
+       "suffix": "-bottom"
+	},
+        {
+        "type": "DrawLiquidRegion"
+        suffix: -liquid
+        drawLiquid: water
+        }
+        {
+	  "type": "DrawCells",
+	  "color": "4E7FD6",
+	  "particleColorFrom": "4E7FD6",
+	  "particleColorTo": "22306C00",
+	  "particles": 200,
+	  "range": 9f
+	}
+	{
+          "type": "DrawDefault"
+        },
+        {
+          type: DrawRegion
+          suffix: -rotator
+          rotateSpeed: 1
+	  layerOffset: 1
+          spinSprite: true
+        }
+        {
+          type: DrawRegion
+          suffix: -rotator
+          rotateSpeed: -1
+	  layerOffset: 1
+          spinSprite: true
+        }
+        {
+          "type": "DrawRegion",
+          "suffix": "-highpoint"
+	},
+        {
+	  type: DrawGlowRegion
+	  suffix: -top
+          glowScale: 8
+          color: FFFFFF
+          layerOffset: 2
+        }
+        {
+	  type: DrawGlowRegion
+	  suffix: -top2
+          glowScale: 9
+          color: FFFFFF
+          layerOffset: 2
+        }
+    ]
+    },
+  "hasPower": true,
+  "hasLiquids": true,
+  "updateEffect": "none",
+  "consumes": {
+    "power": 0.9
+    "liquids": [
+      "water/1.4"
+    ]
+
+  },
+  "requirements": [
+    cadmium/35
+    carbon/16
+    iceshard/20
+  ],
+  research: {
+    parent: sodium-extractor,
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "basin"
+        }
+    ]
+  }
+  researchCost: [
+    cadmium/216
+    carbon/116
+    iceshard/16
+  ]
+  "category": "crafting",
+  "outputItem": "iceshard/2"

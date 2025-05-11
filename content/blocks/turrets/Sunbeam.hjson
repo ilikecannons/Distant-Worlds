@@ -1,0 +1,149 @@
+type: LaserTurret
+name: Sunbeam
+description: Fires a continuous laser.
+size: 3
+shootDuration: 100
+health: 3150
+range: 175
+liquidCapacity: 210
+hasLiquids: true
+consumes: {
+    "power": 2,
+    "liquid": {
+	"liquid": liquid-keatrine,
+        "amount": 0.4,
+        "optional": false,
+        "booster": false,
+        "update": false
+    }
+}
+rotateSpeed: 4
+reload: 30
+recoilAmount: 5
+restitution: 0.01
+minWarmup: 0.999
+warmupMaintainTime: 140
+shootWarmupSpeed: 0.05
+shootSound: LargeBang
+moveWhileCharging: true
+chargeSound: none
+shoot: {
+  firstShotDelay: 80
+}
+shootType: {
+  type: ContinuousLaserBulletType
+  damage: 26
+status: burning
+statusDuration: 150
+  lifetime: 15
+  fadeTime: 35
+  length: 350
+  width: 10
+"colors":["bf7c00", "dba718", "ffe57c", "ffffff"],
+	"chargeEffect": {
+"type": "MultiEffect",
+    "effects": [
+    {
+    "type": "WaveEffect",
+    "lifetime": 40,
+    "sizeFrom": 100,
+    "sizeTo": 0,
+    "strokeFrom": 0,
+    "strokeTo": 5,
+    "colorFrom": "ffea00",
+    "colorTo": "fff691"
+}
+]
+	},
+}
+"shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "FFB166",
+                "colorTo": "000000",
+                "sizeFrom": 1,
+                "strokeFrom": 10,
+                "strokeTo": 1,
+                "sizeTo": 50,
+                "lifetime": 100
+            }
+        ]
+    },
+drawer: {
+  type: DrawTurret
+  basePrefix: Sunbeam-
+  parts: [
+    {
+    type: RegionPart
+    suffix: -wing
+    mirror: true
+    progress: warmup
+    heatProgress: warmup
+    heatColor: FFFF11
+    moveY: 1
+    moveX: -4.5
+    moveRot: -10
+    under: false
+    children: [
+      { 
+        type: RegionPart
+        suffix: -spike
+        mirror: true
+        progress: recoil
+        heatProgress: recoil
+        heatColor: FFFFFF
+        moveY: 0
+        moveX: 0
+        moveRot: 20
+        under: true
+      }
+    ]
+    }
+    {
+    type: RegionPart
+    suffix: -main
+    progress: warmup
+    heatProgress: warmup
+    heatColor: FFFF11
+    moveY: 0.755
+    mirror: false
+    under: false
+    children: [
+      { 
+        type: RegionPart
+        suffix: -tip
+        mirror: false
+        progress: recoil
+        heatProgress: recoil
+        heatColor: FFFFFF
+        moveY: -1.5
+        moveX: 0
+        moveRot: 0
+        under: true
+      }
+    ]
+    }
+    {
+    type: RegionPart
+    suffix: -main2
+    progress: warmup
+    heatProgress: warmup
+    heatColor: FFFF11
+    moveY: -0.755
+    moveX: 0
+    mirror: false
+    under: false
+    }
+  ]
+}
+category: turret
+requirements: [
+  cadmium/1040
+  carborundum/635
+  salt/150
+  sodium/470
+  carbon/890
+  diamond/100
+  ]

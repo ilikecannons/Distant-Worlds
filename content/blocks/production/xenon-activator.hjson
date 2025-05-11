@@ -1,0 +1,60 @@
+  "type": "GenericCrafter",
+  "name": "Xenon Activator",
+  "description": "activates Xenon to be used as booster",
+  "health": 650,
+  "size": 3,
+	"drawer": {
+	"type": "DrawMulti",
+        "drawers": [
+        {
+        "type": "DrawRegion"
+        suffix: -bottom
+        }
+        {
+        "type": "DrawLiquidRegion"
+        suffix: -liquid1
+        drawLiquid: liquid-xenon
+        }
+        {
+        "type": "DrawLiquidRegion"
+        suffix: -liquid2
+        drawLiquid: liquid-active-xenon
+        }
+        {
+        "type": "DrawLiquidRegion"
+        suffix: -liquid3
+        drawLiquid: liquid-chlorine
+        }
+        {
+        "type": "DrawDefault"
+        }
+        {
+	  "type": "DrawGlowRegion",
+	  "suffix": "-top",
+	  "glowScale": 8,
+	  "color": "FFFFFF"
+	}
+        ]
+        }
+  "hasItems": false,
+  "craftTime": 70,
+  "craftEffect": "none",
+  "hasPower": true,
+  "hasLiquids": true,
+    liquidCapacity: 50
+  "updateEffect": "none",
+  "consumes": {
+  "power": 1.8,
+    "liquids": [
+      "liquid-xenon/0.7",
+      "liquid-chlorine/0.3"
+    ],
+  },
+  "requirements": [
+    cadmium/130
+    carbon/100
+    carborundum/85
+    salt/45
+  ],
+  "category": "crafting",
+  "outputLiquid": "liquid-active-xenon/0.45"

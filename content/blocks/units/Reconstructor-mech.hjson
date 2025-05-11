@@ -1,0 +1,39 @@
+name: Mech Reconstructor
+description: Upgrades mechs units.
+type: Reconstructor
+size: 3
+health: 1200
+constructTime: 1500
+liquidCapacity: 60
+consumes: {
+  power: 2
+    items: {
+      items: [
+        cadmium/45
+        carborundum/35
+      ]
+    }
+  liquid: {
+    liquid: water
+    amount: 0.5
+  }
+}
+upgrades: [
+  [mech-1, mech-2]
+]
+requirements: [
+  cadmium/105
+  purifiedsand/16
+  carborundum/40
+]
+research: {
+  parent: Constructor-mech,
+  objectives: [
+    {
+      type: "OnSector",
+      preset: "golden-island"
+    }
+  ]
+}
+researchCostMultiplier: 1
+category: units

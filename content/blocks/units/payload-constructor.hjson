@@ -1,0 +1,19 @@
+  "type": "Constructor",
+  "name": "Basic Component Assembler",
+  "description": "makes stuff",
+  "health": 450,
+  "size": 3,
+  "hasItems": true,
+  "craftEffect": "none",
+  "hasPower": true,
+  "updateEffect": "none",
+  minBlockSize: 1
+  maxBlockSize: 2
+  "consumes": {
+  "power": 2.1
+  }
+  "requirements": [
+    cadmium/35
+    carborundum/20
+  ],
+  "category": "units"

@@ -1,0 +1,70 @@
+type: ConsumeGenerator
+name: Lithium Discharge Generator
+description: Makes power by discharging lithium. Slowly builds up chlorine and explodes when it reaches the maximum threshold.
+size: 3
+squareSprite: false
+hasLiquids: true
+hasItems: true
+hasPower: true
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawLiquidRegion
+      drawLiquid: liquid-chlorine
+      suffix: -liquid
+    }
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawPlasma
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawGlowRegion
+      suffix: -top
+      blending: additive
+      color: d76a6a80
+    }
+  ]
+}
+ambientSound: hum
+ambientSoundVolume: 0.5
+powerProduction: 8.6
+explodeDamage: 600
+category: power
+requirements: [
+  cadmium/85
+  iceshard/30
+  lithium/16
+]
+itemDuration: 60
+"consumes": {
+  "items": [
+    "lithium/1"
+  ],
+  "liquids": [
+    "water/0.4"
+  ],
+},
+research: {
+    parent: "ctg",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "secret-pass"
+        }
+    ]
+},
+researchCost: [
+  cadmium/150
+  iceshard/85
+  lithium/48
+]
+outputLiquid: liquid-chlorine/0.05
+liquidCapacity: 4
+explodeOnFull: true

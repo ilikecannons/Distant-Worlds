@@ -1,0 +1,197 @@
+"type": ItemTurret,
+"name": Anaconda,
+"description": Fires bullets that pierce 20 times. Great for crowd control.
+"size": 4,
+"health": 670,
+range: 300,
+rotateSpeed: 2,
+minWarmup: 0.9
+reload: 150
+minWarmup: 0.99
+warmupMaintainTime: 120
+shootWarmupSpeed: 0.05
+heatRequirement: 6
+consumes: {
+  power: 1.5
+}
+xRand: 1
+shoot: {
+type: ShootPattern
+shots: 10
+shotDelay: 1
+}
+recoilAmount: 3
+shootSound: Anaconda-shoot-alt
+ammoTypes: {
+  metallic-frag: {
+    type: BasicBulletType,
+    sprite: akrehela-energy-blade
+    trailLength: 9
+    inaccuracy: 0
+    pierce: true
+    pierceCap: 20
+    homingPower: 0.01
+    homingRange: 100
+    homingDelay: 20
+    shrinkX: 0
+    shrinkY: 0
+    weaveMag: 7
+    weaveScl: 3
+    speed: 10
+    lifetime: 30
+    damage: 12
+    width: 10
+    height: 10
+    frontColor: 9f9f5f
+    backColor: f9f9c9
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    ammoMultiplier: 2
+    collidesTiles: true
+    explodeRange: 10
+    splashDamageRadius: 10
+    splashDamage: 10
+    hitEffect: colorSpark
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+              type: ParticleEffect
+              particles: 3
+              lifetime: 30
+              length: 10
+              sizeFrom: 2
+              sizeTo: 0
+              colorFrom: dfe8eb
+              colorTo: c8dee3
+              strokeFrom: 1
+              strokeTo: 0
+              interp: pow3Out
+              spin: 1
+              sizeInterp: pow3In
+              region: akrehela-star1
+            }
+        ]
+    }
+  }
+}
+category: turret
+requirements: [
+  cadmium/150
+  lithium/75
+  iceshard/90
+  carborundum/55
+]
+drawer: {
+  type: DrawTurret
+  basePrefix: Anaconda-
+  parts: [
+//runes
+    {
+    type: ShapePart
+    progress: warmup
+    rotateSpeed: -3
+    color: ffccff
+    sides: 3
+    hollow: true
+    stroke: 0
+    strokeTo: 1
+    radius: 2
+    radiusTo: 5
+    y: -9
+    layer: 110
+  }
+  {
+    type: HaloPart
+    progress: warmup
+    color: ffccff
+    shapes: 3
+    tri: true
+    triLength: 0
+    triLengthTo: 8
+    shapeRotation: 0
+    haloRotation: 0
+    haloRotateSpeed: -1.5
+    hollow: true
+    stroke: 0
+    strokeTo: 1
+    radius: 3
+    haloRadius: 8
+    y: -9
+    layer: 110
+  }
+  {
+    type: HaloPart
+    progress: warmup
+    color: ffccff
+    shapes: 3
+    tri: true
+    triLength: 0
+    triLengthTo: 3
+    shapeRotation: 180
+    haloRotation: 0
+    haloRotateSpeed: -1.5
+    hollow: true
+    stroke: 0
+    strokeTo: 1
+    radius: 3
+    haloRadius: 8
+    y: -9
+    layer: 110
+  }
+//actual turret parts
+    {
+    type: RegionPart
+    suffix: -barrel
+    progress: recoil
+    heatProgress: warmup
+    moveX: 0
+    moveY: -1
+    mirror: false
+    under: false
+    children: [
+      {
+      type: RegionPart
+      suffix: -tip
+      progress: recoil
+      heatProgress: warmup
+      moveX: 0
+      moveY: -2
+      mirror: false
+      under: true
+      }
+    ]
+    }
+    {
+    type: RegionPart
+    suffix: -wing
+    progress: warmup
+    heatProgress: warmup
+    moveX: -2
+    moveY: 1
+    mirror: true
+    under: false
+    children: [
+      {
+      type: RegionPart
+      suffix: -blade
+      progress: warmup
+      heatProgress: warmup
+      moveX: 0
+      moveY: 2
+      mirror: true
+      under: true
+      moves: [
+        {
+        type: PartMove
+        progress: recoil
+        x: 0
+        y: 0
+        rot: 20
+        }
+      ]
+      }
+    ]
+    }
+  ]
+}

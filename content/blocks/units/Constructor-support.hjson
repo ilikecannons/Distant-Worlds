@@ -1,0 +1,35 @@
+name: Support Constructor
+description: Makes support units.
+type: UnitFactory
+health: 800
+size: 3
+consumes: {
+  power: 1.3
+}
+plans: [
+  {
+    unit: sflare-1
+    time: 1200
+    requirements: [
+      iceshard/30
+      carborundum/16
+      sodium/20
+    ]
+  }
+]
+category: units
+requirements: [
+  cadmium/60
+  carborundum/50
+  sodium/35
+]
+research: {
+  parent: Constructor-flying,
+  objectives: [
+    {
+      type: "OnSector",
+      preset: "golden-island"
+    }
+  ]
+}
+researchCostMultiplier: 1

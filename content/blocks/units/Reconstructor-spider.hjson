@@ -1,0 +1,41 @@
+name: Spider-mech Reconstructor
+description: Upgrades spider mechs units.
+type: Reconstructor
+size: 3
+health: 1200
+constructTime: 1500
+liquidCapacity: 60
+consumes: {
+  power: 2
+    items: {
+      items: [
+        cadmium/45
+        sodium/30
+        carborundum/35
+      ]
+    }
+  liquid: {
+    liquid: cryofluid
+    amount: 0.5
+  }
+}
+upgrades: [
+  [cspider-1, cspider-2]
+]
+requirements: [
+  cadmium/70
+  purifiedsand/16
+  iceshard/20
+  carborundum/45
+]
+research: {
+  parent: Constructor-spider,
+  objectives: [
+    {
+      type: "SectorComplete",
+      preset: "golden-island"
+    }
+  ]
+}
+researchCostMultiplier: 1
+category: units

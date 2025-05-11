@@ -1,0 +1,16 @@
+type: PowerNode
+name: Electronic Node
+description: Allows energy to travel using directional electromagnetic fields.
+size: 1
+maxNodes: 10
+laserRange: 10
+laserColor1: 99ffff
+laserColor2: 00d9ff
+category: power
+requirements: [
+  carbon/6
+]
+research: ctg
+researchCost: [
+    carbon/42
+    ]

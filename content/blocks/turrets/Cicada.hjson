@@ -1,0 +1,212 @@
+"type": ItemTurret,
+"name": Cicada,
+"description": Turret that continuously fires bullets.
+"size": 3,
+"health": 750,
+range: 230,
+rotateSpeed: 3,
+reload: 6
+burstSpacing: 1
+shots: 1
+xRand: 1
+recoilAmount: 3
+shootSound: shootAltLong
+
+ammoTypes: {
+  iceshard: {
+    type: BasicBulletType,
+    speed: 5
+    lifetime: 44.85
+    inaccuracy: 15
+    damage: 16
+    reloadMultiplier: 0.75
+    width: 11
+    height: 16
+    frontColor: 73abab
+    backColor: 9fc5c5
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    ammoMultiplier: 4
+    collidesTiles: true
+    explodeRange: 1
+    splashDamageRadius: 1
+    splashDamage: 30
+    hitEffect: pointHit
+    collidesTiles: true
+    splashDamageRadius: 10
+    splashDamage: 12
+    "fragVelocityMin": 0.7,
+      "fragVelocityMax": 2,
+      "fragBullets": 3,
+      "fragBullet": {
+        "speed": 4,
+        "collidesTiles": false,
+        "damage": 8,
+        "width": 6,
+        "heigth": 6,
+        lifetime: 6
+        despawnHit: true
+    }
+  }
+  gold: {
+    type: BasicBulletType,
+    speed: 5.5
+    lifetime: 44.85
+    inaccuracy: 12
+    damage: 15
+    reloadMultiplier: 1.25
+    width: 11
+    height: 16
+    frontColor: b6c63b
+    backColor: e7f295
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    ammoMultiplier: 4
+    collidesTiles: true
+    explodeRange: 1
+    splashDamageRadius: 5
+    splashDamage: 30
+    hitEffect: pointHit
+    collidesTiles: true
+    splashDamageRadius: 10
+    splashDamage: 12
+    "fragVelocityMin": 0.7,
+      "fragVelocityMax": 2,
+      "fragBullets": 3,
+      "fragBullet": {
+        "speed": 4,
+        "collidesTiles": false,
+        "damage": 8,
+        "width": 6,
+        "heigth": 6,
+        lifetime: 6
+        despawnHit: true
+    }
+  }
+  keatite: {
+    type: BasicBulletType,
+    speed: 5
+    lifetime: 44.85
+    inaccuracy: 15
+    damage: 14
+    width: 11
+    height: 16
+    frontColor: 7373ab
+    backColor: 9f9fc5
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    ammoMultiplier: 4
+    collidesTiles: true
+    explodeRange: 1
+    hitEffect: pointHit
+    collidesTiles: true
+    splashDamageRadius: 10
+    splashDamage: 10
+    "fragVelocityMin": 0.3,
+      "fragVelocityMax": 2,
+      "fragBullets": 3,
+      "fragBullet": {
+        "speed": 4,
+        "collidesTiles": false,
+        "damage": 8,
+        "width": 6,
+        "heigth": 6,
+        lifetime: 9
+        despawnHit: true
+    }
+  }
+}
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+              type: ParticleEffect
+              particles: 2
+              lifetime: 40
+              length: 20
+              sizeFrom: 3
+              sizeTo: 1
+              colorFrom: b2afb3
+              colorTo: d5d2d6
+              strokeFrom: 1
+              strokeTo: 1
+              interp: pow3Out
+              spin: 1
+              sizeInterp: pow2In
+              region: akrehela-shell
+            }
+        ]
+    }
+category: turret
+requirements: [
+  cadmium/100
+  carborundum/30
+  iceshard/60
+]
+drawer: {
+  type: DrawTurret
+  basePrefix: Cicada-
+  parts: [
+    {
+    type: RegionPart
+    suffix: -barrel
+    progress: recoil
+    heatProgress: warmup
+    heatColor: CCFFFF
+    moveY: -0.7
+    mirror: false
+    under: true
+    }
+    {
+    type: RegionPart
+    suffix: -wing
+    mirror: true
+    progress: warmup
+    heatProgress: warmup
+    heatColor: CCFFFF
+    moveY: 0.2
+    moveX: -0.75
+    moveRot: -8
+    under: false
+    children: [
+      {
+        type: RegionPart
+        suffix: -side
+        mirror: true
+        progress: warmup
+        heatProgress: warmup
+        heatColor: CCFFFF
+        moveY: 0.2
+        moveX: -1
+        moveRot: 0
+        under: true
+      }
+    ]
+  }
+  {
+    type: RegionPart
+    suffix: -hand
+    mirror: true
+    progress: warmup
+    heatProgress: warmup
+    heatColor: CCFFFF
+    moveY: 0.1
+    moveX: -1.2
+    under: false
+    }
+  ]
+}
+research: {
+    parent: "Spear",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "transport-cove"
+        }
+    ]
+}
+researchCost: [
+  cadmium/4500
+  carborundum/100
+  iceshard/2500
+]

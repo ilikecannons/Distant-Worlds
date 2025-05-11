@@ -1,0 +1,86 @@
+type: NuclearReactor
+name: Electric Field Destabilizer
+description: a
+size: 3
+hasPower: true
+hasLiquids: true
+hasItems: true
+explodeSound: reactor-explosion
+explosionDamage: 800
+explosionShake: 10
+itemCapacity: 20
+liquidCapacity: 20
+itemDuration: 100
+powerProduction: 13.5
+heating: 0.008
+squareSprite: false
+smokeThreshold: 0.35
+flashThreshold: 0.5
+explosionRadius: 17
+explodeEffect: [scatheExplosion, reactorExplosion]
+smokeEffect: {
+    type: RadialEffect
+    layer: 118
+    rotationSpacing: 60
+    amount: 1
+    lengthOffset: 2
+    effect: {
+      particles: 4
+      length: 90
+      lifetime: 300
+      cone: 20
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 0
+      sizeTo: 12
+      colorFrom: ffb36199
+      colorTo: 46454300
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 111
+   }
+}
+fuelItem: sodium
+consumes: {
+  liquid: liquid-active-xenon/0.4
+  items: [
+    sodium/1
+  ]
+}
+requirements: [
+  cadmium/1
+]
+category: power
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawRegion
+      suffix: -rotator1
+      rotateSpeed: 10
+      spinSprite: true
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawGlowRegion
+      suffix: -top
+      blending: additive
+      color: FFFFFF
+    }
+    {
+      type: DrawRegion
+      suffix: -rotator
+      rotateSpeed: -0.5
+      spinSprite: true
+    }
+    {
+      type: DrawPlasma
+    }
+  ]
+}

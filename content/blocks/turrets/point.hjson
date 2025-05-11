@@ -1,0 +1,113 @@
+"type": ItemTurret,
+"size": 2,
+"health": 500,
+range: 200,
+rotateSpeed: 5,
+reload: 30
+burstSpacing: 1
+shots: 1
+xRand: 1
+recoilAmount: 1
+shootSound: shootAltLong
+ammoTypes: {
+  cadmium: {
+    type: BasicBulletType,
+    speed: 5
+    lifetime: 39
+    damage: 20
+    width: 5
+    height: 7
+    frontColor: ab7373
+    backColor: c59f9f
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    ammoMultiplier: 1
+    collidesTiles: true
+    explodeRange: 1
+    splashDamageRadius: 1
+    splashDamage: 20
+    hitEffect: pointHit
+  }
+iceshard: {
+    type: BasicBulletType,
+    speed: 5
+    lifetime: 39
+    reloadMultiplier: 1.5
+    damage: 16
+    width: 5
+    height: 7
+    frontColor: 33bbbb
+    backColor: 99ffff
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    ammoMultiplier: 2
+    collidesTiles: true
+    explodeRange: 1
+    splashDamageRadius: 1
+    splashDamage: 20
+    hitEffect: pointHit
+  }
+}
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+              type: ParticleEffect
+              particles: 3
+              lifetime: 30
+              length: 10
+              sizeFrom: 2
+              sizeTo: 0
+              colorFrom: dfe8eb
+              colorTo: c8dee3
+              strokeFrom: 1
+              strokeTo: 0
+              interp: pow3Out
+              spin: 1
+              sizeInterp: pow3In
+              region: circle
+            }
+        ]
+    }
+category: turret
+requirements: [
+  cadmium/25
+]
+drawer: {
+  type: DrawTurret
+  basePrefix: point-
+  parts: [
+    {
+    type: RegionPart
+    suffix: -wing
+    progress: recoil
+    mirror: true
+    moveY: 0
+    moveX: 0
+    moveRot: 0
+    under: false
+    }
+    {
+    type: RegionPart
+    suffix: -barrel
+    progress: recoil
+    mirror: false
+    moveY: -0.5
+    moveX: 0
+    moveRot: 0
+    under: true
+    }
+  ]
+}
+research: {
+    parent: "akrehela-Turrets",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "crash-site"
+        }
+    ]
+}
+researchCost: [
+    cadmium/85
+  ]
