@@ -3,6 +3,8 @@ A frigid wasteland, full of dangers.
 
 <p align="center"><img src="banner.png" alt="banner" width="800"></p>
 
+This mod is currently in development.
+
 Take down the enemy. Destroy the bases. Weaken their grip on the Acropolis. Stop the enemies from destroying the world you live on.
 A frontal attack on the base would be impossible. We have to weaken the base so we can attack.
 You have little time before the core cracker fires, and all is lost... (It won't actually destroy your Serpulo bases, i don't know how to do that)
