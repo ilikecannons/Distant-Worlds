@@ -1,0 +1,22 @@
+name: Lithium Sands
+description: "Lithium chloride salt, can be split into lithium and chloride."
+color: A29D87
+hardness: 1
+explosiveness: 0.35
+flammability: 0.8
+radioactivity: 0
+charge: 0.4
+cost: 1
+buildable: false
+requiresUnlock: true
+alwaysUnlocked: true
+research: {
+  parent: redsand
+  objectives: [
+    {
+      type: OnSector
+      preset: secret-pass
+    }
+  ]
+}
+hiddenOnPlanets: [serpulo, erekir]

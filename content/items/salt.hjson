@@ -1,0 +1,11 @@
+name: Salt
+description: "A powerful and highly prized material on Akrehela."
+color: FFFFFF
+hardness: 2
+explosiveness: 9999999
+flammability: 0
+radioactivity: 0
+charge: 0.4
+cost: 2
+buildable: true
+hiddenOnPlanets: [serpulo, erekir]

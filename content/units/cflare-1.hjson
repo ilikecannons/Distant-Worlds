@@ -1,0 +1,74 @@
+    "type": "flying",
+    "lowAltitude": true,
+    "speed": 3,
+    "accel": 0.06,
+    "drag": 0.02,
+    "flying": true,
+    "health": 1000,
+    "hitSize": 7,
+    "armor": 1,
+    "itemCapacity": 30,
+  "outlineColor": "36363c",
+    "engineOffset": 6,
+    "faceTarget": true,
+weapons: [
+{
+name: cflare-body-gun-a
+mirror: false
+x: 0
+y: 6
+top: false
+rotate: false
+reload: 75
+recoil: 3
+shootSound: RevelationSound
+ejectEffect: none
+    "bullet": { 
+    "colors":["00ff00", "99ff99", "FFFFFFF"],
+      "type": "LaserBulletType",
+      "length": 100,
+      "width": 25,
+      "damage": 20,
+      "recoil": 3.5,
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "11dcf2",
+                "colorTo": "11dcf2",
+                "sizeFrom": 1,
+                "sizeTo": 20,
+                "lifetime": 10
+            }
+            {
+              type: ParticleEffect
+              particles: 5
+              lifetime: 30
+              length: 10
+              sizeFrom: 3
+              sizeTo: 0
+              colorFrom: ffffff
+              colorTo: adfaff
+              strokeFrom: 3
+              strokeTo: 1.5
+              interp: pow3Out
+              spin: 5
+              sizeInterp: pow2In
+              region: akrehela-triangle
+            }
+        ]
+    }
+}
+}
+]
+research: {
+    parent: "Constructor-flying",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "isles"
+        }
+    ]
+}
+researchCostMultiplier: 0

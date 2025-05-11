@@ -1,0 +1,22 @@
+name: Purified Sand
+description: "Red sand, but with all its impurities extracted."
+color: FFDDBE
+hardness: 1
+explosiveness: 0
+flammability: 0
+radioactivity: 0
+charge: 0
+cost: 1.3
+buildable: true
+requiresUnlock: true
+alwaysUnlocked: true
+research: {
+    parent: "redsand",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "isles"
+        }
+    ]
+}
+hiddenOnPlanets: [serpulo, erekir]

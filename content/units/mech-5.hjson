@@ -1,0 +1,162 @@
+	"outlineColor": "36363c",
+	"type": "mech",
+	"speed": 0.2,
+	"hitSize": 34,
+	"health": 15970,
+	"faceTarget": true,
+	"armor": 1,
+	"range": 175,
+	"rotateSpeed": 1,
+"mechFrontSway": 0.8,
+"mechSideSway": 0.8,
+"mechStepParticles": true,
+"mechStepShake": 1.8,
+	"allowLegStep": true,
+	"hovering": false,
+	"immunities": [
+		"freezing"
+	],
+targetAir: true
+weapons: [
+{
+name: mech-gun-e
+x: 16
+y: 0
+mirror: true
+top: false
+rotate: false
+inaccuracy: 0
+reload: 100
+recoil: 3
+shootSound: largeCannon
+ejectEffect: none
+bullet: {
+    type: ArtilleryBulletType,
+    speed: 3
+    lifetime: 130
+    damage: 200
+    width: 13
+    height: 20
+    frontColor: ffa1a1
+    backColor: ffefef
+    trailColor: 7D6274
+    trailChance: 1
+    trailEffect: colorSpark
+    trailInterval: 3
+    trailRotation: true
+    trailLength: 20
+    shootEffect: [
+    {
+      "type": "ParticleEffect",
+      "line": false,
+      "region": "akrehela-steam",
+      "particles": 20,
+      "offset": 5,
+      "sizeFrom": 8,
+      "sizeTo": 0,
+      "lifetime": 80,
+      "length": -105,
+      "cone": 10,
+      "sizeInterp": "pow3Out",
+      "interp": "pow2Out",
+      "colorFrom": "FFFFFF",
+      "colorTo": "C99292FF"
+    },
+    shootBig]
+    collidesTiles: true
+    explodeRange: 1
+    splashDamageRadius: 1
+    splashDamage: 20
+    hitEffect: scatheExplosion
+    fragVelocityMin: 0.4
+    fragVelocityMax: 1
+    sprite: missile-large
+    fragBullets: 30
+    fragLifeMin: 0.3
+      "fragBullet": {
+        "speed": 4,
+        "collidesTiles": true,
+        "homingPower": 0.1,
+        "homingRange": 150,
+        "homingDelay": 20,
+        "damage": 100,
+        "width": 20,
+        "height": 6,
+        lifetime: 35
+        hitSound: explosion
+        despawnHit: true
+        trailColor: 7D6274
+        trailLength: 15
+        "hitEffect": {
+        "type": "ParticleEffect",
+        "line": false,
+        "particles": 12,
+        "offset": 5,
+        "lifetime": 80,
+        "length": 40,
+        "cone": 180,
+        "sizeFrom": 3.7,
+        "sizeTo": 0,
+        "interp": "pow2Out",
+        "sizeInterp": "pow2In",
+        "colorFrom": "FFFFFFCE",
+        "colorTo": "F9929238"
+        }
+    }
+}
+}
+{
+name: mech-gun-f
+x: 8
+y: 0
+mirror: true
+top: true
+rotate: true
+alternate: true
+inaccuracy: 0
+reload: 40
+recoil: 3
+shootSound: blaster
+ejectEffect: none
+shoot: {
+type: ShootPattern
+shots: 3
+shotDelay: 4
+}
+bullet: {
+    type: BasicBulletType,
+    speed: 7
+    lifetime: 40
+    damage: 20
+    width: 4
+    height: 10
+    frontColor: ffa1a1
+    backColor: ffefef
+    trailColor: 7D6274
+    trailWidth: 1
+    trailLength: 6
+    shootEffect: shootBig
+    collidesTiles: true
+    explodeRange: 10
+    splashDamageRadius: 10
+    splashDamage: 20
+    hitEffect: pointHit
+    fragVelocityMin: 0.4
+    fragVelocityMax: 1
+    fragBullets: 2
+    fragLifeMin: 0.3
+      "fragBullet": {
+        "type": "LightningBulletType",
+        "collidesTiles": true,
+        "damage": 10,
+        "lightningLength": 10,
+        "lightningLengthRand": 2,
+        "width": 12,
+        "height": 6,
+        lifetime: 15
+        hitSound: spark
+        despawnHit: false
+      }
+    }
+}
+]

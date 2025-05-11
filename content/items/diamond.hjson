@@ -1,0 +1,11 @@
+name: Diamond
+description: "its diamond"
+color: FFFF22
+hardness: 4
+explosiveness: 0
+flammability: 0
+radioactivity: 0
+charge: 0
+cost: 3.5
+buildable: true
+hiddenOnPlanets: [serpulo, erekir]

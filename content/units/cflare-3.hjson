@@ -1,0 +1,107 @@
+    "type": "flying",
+    "lowAltitude": true,
+    "speed": 2,
+    "accel": 0.06,
+    "drag": 0.02,
+    "flying": true,
+    "health": 2250,
+    "hitSize": 12,
+    "armor": 2,
+    "itemCapacity": 0,
+    "outlineColor": "36363c",
+    "engineOffset": 10,
+    "engineSize": 4,
+    "faceTarget": true,
+weapons: [
+{
+name: cflare-gun-a
+x: 3
+y: 0
+mirror: true
+shoot: {
+type: ShootPattern
+shots: 2
+shotDelay: 3
+}
+top: false
+rotate: false
+reload: 20
+recoil: 1
+shootSound: shootAltLong
+ejectEffect: none
+bullet: {
+    type: BasicBulletType,
+    speed: 6
+    lifetime: 40
+    damage: 10
+    width: 10
+    height: 17
+    frontColor: e3cea9
+    backColor: cef2d8
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    ammoMultiplier: 5
+    collidesTiles: true
+    explodeRange: 1
+    splashDamageRadius: 1
+    splashDamage: 30
+    hitEffect: pointHit
+}
+}
+
+{
+name: cflare-body-gun-a
+mirror: false
+x: 0
+y: 6
+top: false
+rotate: false
+reload: 100
+inaccuracy: 20
+recoil: 3
+shoot: {
+type: ShootPattern
+shots: 2
+shotDelay: 0
+}
+shootSound: RevelationSound
+ejectEffect: none
+    "bullet": { 
+    "colors":["00ff00", "99ff99", "FFFFFFF"],
+      "type": "LaserBulletType",
+      "length": 140,
+      "width": 25,
+      "damage": 20,
+      "recoil": 2.5,
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "11dcf2",
+                "colorTo": "11dcf2",
+                "sizeFrom": 1,
+                "sizeTo": 20,
+                "lifetime": 10
+            }
+            {
+              type: ParticleEffect
+              particles: 5
+              lifetime: 30
+              length: 10
+              sizeFrom: 3
+              sizeTo: 0
+              colorFrom: ffffff
+              colorTo: adfaff
+              strokeFrom: 3
+              strokeTo: 1.5
+              interp: pow3Out
+              spin: 5
+              sizeInterp: pow2In
+              region: akrehela-triangle
+            }
+        ]
+    }
+}
+}
+]

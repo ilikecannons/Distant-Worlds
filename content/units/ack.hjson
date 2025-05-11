@@ -1,0 +1,368 @@
+	"outlineColor": "424245",
+        "name": "the death star",
+        "description": "Do not even ask...",
+    outlineRadius: 3
+  "type": "legs",
+	"speed": 5,
+	"hitSize": 7,
+	"health": 9970987097870797870979797890913245893458723465298374652384075,
+	"faceTarget": true,
+	"armor": 1,
+        "itemCapacity": 249378659
+	"range": 120,
+	"targetAir": true,
+	"rotateSpeed": 300,
+            "legMoveSpace": 1,
+            "legMaxLength": 1.2,
+            "legMinLength": 0.3,
+            "legLengthScl": 0.96,
+            "legForwardScl": 0.5,
+            "legPhysicsLayer": true,
+         "legGroupSize": 2,
+         "legCount": 4,
+         "legExtension": 0,
+        "legContinuousMove": true,
+        "lockLegBase": false,
+        "rippleScale": 0.2,
+	"legBaseOffset": 0,
+	"legLength": 8, 
+	"hovering": false,
+	"immunities": [
+		"freezing"
+	],
+"weapons": [
+		{
+    "name": "ack-gun2",
+    "reload": 1,
+    "mirror": true,
+    "x": 5,
+    "y": 0,
+    "shootY": 2,
+    "recoil": 1,
+    "rotate": true,
+    "inaccuracy": 20,
+"shoot": {
+"type": "shootPattern",
+ "shots": 25,
+    "shotDelay": 2,
+}
+    shootSound: pew
+    bullet: {
+    type: MissileBulletType
+      speed: 8
+      homingPower: 1
+      homingRange: 400
+      lifetime: 100
+      damage: 1000
+      width: 6
+      height: 6
+        frontColor: 03f8fc
+        backColor: ffffff
+      despawnHit: true
+      despawnEffect: none
+      hitEffect: [
+        {
+          type: ParticleEffect
+          particles: 10
+          line: true
+          lifetime: 25
+          length: 200
+          lenFrom: 50
+          lenTo: 0
+          strokeFrom: 2
+          strokeTo: 0
+          colorFrom: 03f8fc
+          colorTo: ffffff
+        }
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 150
+          lifetime: 20
+          strokeFrom: 50
+          strokeTo: 0
+          colorFrom: 03f8fc
+          colorTo: ffffff
+        }
+      ]
+      weaveMag: 20
+      weaveScale: 2
+      weaveRandom: true
+    trailChance: 1
+    trailColor: 03f8fc
+    }
+    }
+{
+    "name": "ack-gun1",
+    "reload": 200,
+    "mirror": false,
+    "x": 0,
+    "y": 0,
+    "shootY": 20,
+    "recoil": 23,
+    "rotate": true,
+    "inaccuracy": 180,
+"shoot": {
+"type": "shootPattern",
+ "shots": 100,
+    "shotDelay": 0,
+}
+    shootSound: BigShootSound
+    bullet: {
+    type: MissileBulletType
+      speed: 4
+      homingPower: 0.03
+      homingRange: 400
+      lifetime: 250
+      damage: 10000
+      width: 10
+      height: 10
+        frontColor: ff0000
+        backColor: ffffff
+      despawnHit: true
+      despawnEffect: none
+      hitEffect: [
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 1200
+          lifetime: 400
+          strokeFrom: 100
+          strokeTo: 0
+          colorFrom: ff0000
+          colorTo: ffffff
+        }
+      ]
+      weaveMag: 1
+      weaveScale: 8
+      weaveRandom: true
+    trailChance: 1
+    trailColor: 03f8fc
+    }
+    }
+{
+name: cflare-body-gun-a
+mirror: false
+x: 0
+y: 0
+top: false
+rotate: false
+reload: 5
+recoil: 10
+inaccuracy: 10
+shootSound: railgun
+ejectEffect: none
+    "bullet": { 
+    "colors":["999999", "444444", "000000"],
+      "type": "LaserBulletType",
+      "length": 1200,
+      "width": 200,
+      "damage": 200000000000000,
+      "recoil": 3.5,
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "000000",
+                "colorTo": "000000",
+                "sizeFrom": 1,
+                "sizeTo": 200,
+                "lifetime": 100
+            }
+        ]
+    }
+}
+}
+{
+name: cflare-gun-a
+x: 3
+y: 0
+mirror: true
+shoot: {
+type: ShootPattern
+shots: 5
+shotDelay: 3
+}
+top: false
+rotate: false
+reload: 4
+inaccuracy: 50
+recoil: 100
+shootSound: shootAltLong
+ejectEffect: none
+bullet: {
+    type: BasicBulletType,
+    speed: 100
+    lifetime: 10
+    damage: 1000000
+    width: 80
+    height: 120
+    frontColor: e3cea9
+    backColor: cef2d8
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    ammoMultiplier: 5
+    collidesTiles: true
+    explodeRange: 100
+    splashDamageRadius: 50
+    splashDamage: 30000
+    hitEffect: pointHit
+}
+}
+{
+name: cflare-gun-a
+x: 0
+y: 0
+mirror: false
+shoot: {
+type: ShootPattern
+shots: 5
+shotDelay: 3
+}
+top: false
+rotate: false
+reload: 40
+inaccuracy: 90
+recoil: 100
+shootSound: railgun
+ejectEffect: none
+bullet: {
+    type: BasicBulletType,
+    speed: 20
+    lifetime: 80
+    damage: 10000
+    width: 80
+    height: 120
+    frontColor: e3cea9
+    backColor: cef2d8
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    ammoMultiplier: 5
+    collidesTiles: true
+    explodeRange: 100
+    splashDamageRadius: 50
+    splashDamage: 300000
+    hitEffect: pointHit
+    "fragVelocityMin": 0.3,
+      "fragVelocityMax": 2,
+      "fragBullets": 2,
+      "fragBullet": {
+        "speed": 20,
+        "collidesTiles": false,
+        "damage": 8000,
+        "width": 40,
+        "heigth": 60,
+        lifetime: 30
+        despawnHit: true
+        "fragVelocityMin": 0.3,
+      "fragVelocityMax": 2,
+      "fragBullets": 2,
+      "fragBullet": {
+        "speed": 20,
+        "collidesTiles": false,
+        "damage": 8000,
+        "width": 20,
+        "heigth": 30,
+        lifetime: 30
+        despawnHit: true
+        "fragVelocityMax": 2,
+      "fragBullets": 2,
+      "fragBullet": {
+        "speed": 20,
+        "collidesTiles": false,
+        "damage": 8000,
+        "width": 10,
+        "heigth": 15,
+        lifetime: 30
+        despawnHit: true
+        "fragVelocityMax": 2,
+      "fragBullets": 2,
+      "fragBullet": {
+        "speed": 20,
+        "collidesTiles": false,
+        "damage": 8000,
+        "width": 40,
+        "heigth": 60,
+        lifetime: 9
+        despawnHit: true
+    }
+    }
+    }
+    }
+}
+}
+{
+name: cflare-body-gun-a
+mirror: false
+x: 0
+y: 0
+top: false
+rotate: false
+reload: 5
+recoil: 10
+inaccuracy: 10
+shootSound: railgun
+ejectEffect: none
+    "bullet": { 
+    "colors":["999999", "444444", "000000"],
+      "type": "LaserBulletType",
+      "length": 1200,
+      "width": 200,
+      "damage": 200000000000000,
+      "recoil": 3.5,
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "000000",
+                "colorTo": "000000",
+                "sizeFrom": 1,
+                "sizeTo": 200,
+                "lifetime": 100
+            }
+        ]
+    }
+}
+}
+{
+name: cflare-gun-z
+x: 0
+y: 0
+mirror: false
+shoot: {
+type: ShootPattern
+shots: 5
+shotDelay: 3
+}
+top: false
+rotate: false
+reload: 4
+inaccuracy: 0
+recoil: 10
+shootSound: shootAltLong
+ejectEffect: none
+"bullet": { 
+    "colors":["990099", "440044", "000000"],
+      "type": "LaserBulletType",
+      "length": 4000,
+      "width": 1000,
+      "damage": 200000000000000000,
+      "recoil": 3.5,
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "ff00ff",
+                "colorTo": "990099",
+                "sizeFrom": 1,
+                "sizeTo": 1600,
+                "lifetime": 100
+            }
+        ]
+    }
+}
+}
+]

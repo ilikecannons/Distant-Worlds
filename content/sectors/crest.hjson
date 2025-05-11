@@ -1,0 +1,18 @@
+difficulty: 2
+planet: Akrehela
+sector: 23
+loadout: antares1
+research: {
+  parent: golden-island
+  objectives: [
+    {
+      type: SectorComplete
+      preset: golden-island
+    }
+    {
+      type: SectorComplete
+      preset: basin
+    }
+    Reconstructor-main
+  ]
+}

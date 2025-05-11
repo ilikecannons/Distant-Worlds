@@ -1,0 +1,14 @@
+difficulty: 5
+planet: Akrehela
+sector: 19
+loadout: antares1
+overrideLaunchDefaults: true
+research: {
+  parent: transport-cove
+  objectives: [
+    {
+      type: SectorComplete
+      preset: transport-cove
+    }
+  ]
+}

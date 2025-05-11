@@ -1,0 +1,81 @@
+    "type": "flying",
+    "lowAltitude": true,
+    "speed": 2.5,
+    "accel": 0.07,
+    "drag": 0.02,
+    "flying": true,
+    "health": 1470,
+    "hitSize": 13,
+    "armor": 2,
+    "itemCapacity": 30,
+  "outlineColor": "36363c",
+    "engineOffset": 10,
+    "faceTarget": true,
+weapons: [
+{
+name: sflare-weapon-a
+x: 5
+y: 1
+mirror: true
+heatColor: 84F491FF
+rotate: false
+shootCone: 40
+baseRotation: -30
+reload: 20
+shootSound: bolt
+bullet: {
+    type: BasicBulletType
+    speed: 3
+    lifetime: 50
+    homingPower: 0.05
+    homingRange: 100
+    homingDelay: 2
+    damage: 35
+    width: 8
+    height: 8
+    spin: 3
+    inaccuracy: 0
+    healAmount: 30
+    collidesTeam: true
+    collides: true
+    backColor: 64f450
+    frontColor: 41e860 
+    smokeEffect: "shootSmallSmoke"
+      "fragVelocityMin": 0.3,
+      "fragVelocityMax": 1.5,
+      "fragBullets": 3,
+      despawnHit: true
+      trailLength: 5
+      hitEffect: {
+    type: WaveEffect
+    lifetime: 15
+    sizeFrom: 0
+    sizeTo: 15
+    strokeFrom: 8
+    strokeTo: 0
+    colorFrom: 64f450
+    colorTo: 2ddb4e
+  }
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "64f450",
+                "colorTo": "2ddb4e",
+                "sizeFrom": 0,
+                "sizeTo": 6,
+                "lifetime": 10
+                strokeFrom: 5
+                strokeTo: 0
+            }
+        ]
+    }
+    shootEffect: colorSpark
+    backSprite: akrehela-steam
+    sprite: akrehela-steam
+    shrinkX: 0
+    shrinkY: 0
+}
+}
+ ] 

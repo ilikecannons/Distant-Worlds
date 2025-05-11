@@ -1,0 +1,45 @@
+	"outlineColor": "36363c",
+	"type": "mech",
+	"speed": 0.5,
+	"hitSize": 18,
+	"health": 2870,
+	"faceTarget": true,
+	"armor": 1,
+	"range": 175,
+	"rotateSpeed": 3,
+"mechFrontSway": 0.5,
+"mechSideSway": 0.5,
+"mechStepParticles": true,
+"mechStepShake": 0.8,
+	"allowLegStep": true,
+	"hovering": false,
+	"immunities": [
+		"freezing"
+	],
+targetAir: true
+weapons: [
+  {
+    name: mech-gun-c
+    x: 12
+    y: 0
+    inaccuracy: 30
+    reload: 90
+    shoot: {
+      type: ShootPattern
+      shots: 2
+      shotDelay: 6
+    }
+    inaccuracy: 10
+    top: false
+    mirror: true
+    alternate: true
+    shootSound: missileSmall
+    shootY: 6
+    bullet: {
+      instantDisappear: true
+      damage: 0
+      spawnUnit: missile-cryo-small
+    }
+  }
+
+]

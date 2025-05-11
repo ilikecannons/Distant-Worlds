@@ -1,0 +1,22 @@
+name: Lithium
+description: "Lithium metal. Do not lick it."
+color: 958B7B
+hardness: 1
+explosiveness: 0.5
+flammability: 0.7
+radioactivity: 0
+charge: 0.3
+cost: 2
+buildable: true
+requiresUnlock: true
+alwaysUnlocked: true
+research: {
+    parent: "lithiumsand",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "secret-pass"
+        }
+    ]
+}
+hiddenOnPlanets: [serpulo, erekir]

@@ -1,0 +1,45 @@
+    "type": "flying",
+    "lowAltitude": true,
+    "speed": 2.7,
+    "accel": 0.13,
+    "drag": 0.04,
+    "flying": true,
+    "health": 285,
+    "hitSize": 8,
+    "armor": 1,
+    "coreUnitDock": true
+    "itemCapacity": 55,
+  "outlineColor": "36363c",
+    "engineOffset": 7,
+    "faceTarget": true,
+    controller: BuilderAI
+    mineTier: 2
+    mineSpeed: 7
+    buildSpeed: 1
+    buildBeamOffset: 5
+    isEnemy: false
+weapons: [
+{
+  widthSinMag: 0.1
+    x: 0
+    y: 5
+    laserColor: e9b6d8
+    mirror: false
+    type: RepairBeamWeapon
+    rotate: false
+    targetBuildings: true
+    targetUnits: false
+    autoTarget: false
+    controllable: true
+    reload: 20
+    shootY: 0
+    shootCone: 20
+    beamWidth: 0.9
+    repairSpeed: 1.5
+    fractionRepairSpeed: 0.03
+    bullet: {
+      type: BulletType
+      maxRange: 50
+      }
+    }
+] 

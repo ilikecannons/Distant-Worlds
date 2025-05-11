@@ -1,0 +1,17 @@
+difficulty: 7
+planet: Akrehela
+sector: 29
+loadout: antares1
+research: {
+  parent: secret-pass
+  objectives: [
+    {
+      type: SectorComplete
+      preset: isles
+    }
+    {
+      type: SectorComplete
+      preset: fringe
+    }
+  ]
+}

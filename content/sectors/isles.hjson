@@ -1,0 +1,13 @@
+difficulty: 6
+planet: Akrehela
+sector: 4
+loadout: antares1
+research: {
+  parent: secret-pass
+  objectives: [
+    {
+      type: SectorComplete
+      preset: secret-pass
+    }
+  ]
+}

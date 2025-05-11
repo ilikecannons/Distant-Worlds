@@ -1,0 +1,15 @@
+captureWave: 20
+difficulty: 1
+planet: Akrehela
+sector: 10
+loadout: antares1
+overrideLaunchDefaults: true
+research: {
+  parent: crash-site
+  objectives: [
+    {
+      type: SectorComplete
+      preset: crash-site
+    }
+  ]
+}

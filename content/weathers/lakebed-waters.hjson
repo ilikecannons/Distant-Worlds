@@ -1,0 +1,23 @@
+type: ParticleWeather
+color: 52b2ff
+noiseColor: 52b2ff
+particleRegion: particle
+sizeMax: 10
+sizeMin: 1
+density: 6400
+status: wet
+useWindVector: true
+drawNoise: true
+opacityMultiplier: 0.5
+baseSpeed: 0.1
+sound: none
+soundVol: 0
+force: 0
+attrs: {
+  heat: 0.1
+  water: 5
+  spores: -2
+  oil: 0.5
+  sand: 0.5
+  light: 2
+}

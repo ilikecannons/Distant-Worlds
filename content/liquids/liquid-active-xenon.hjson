@@ -1,0 +1,7 @@
+"name": "Activated Xenon",
+"description": "Xenon that has been activated",
+"gas": true,
+"cache": "water",
+"barColor": "CD9DE9"
+color: CD9DE9
+gasColor: CD9DE9

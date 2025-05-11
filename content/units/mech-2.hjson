@@ -1,0 +1,72 @@
+	"outlineColor": "36363c",
+	"type": "mech",
+	"speed": 0.5,
+	"hitSize": 12,
+	"health": 716,
+	"faceTarget": true,
+	"armor": 1,
+	"range": 175,
+	"rotateSpeed": 3,
+"mechFrontSway": 0.3,
+"mechSideSway": 0.3,
+"mechStepParticles": true,
+"mechStepShake": 0.5,
+	"allowLegStep": true,
+	"hovering": false,
+	"immunities": [
+		"freezing"
+	],
+targetAir: true
+weapons: [
+{
+name: mech-gun-b
+x: 8.4
+y: 0
+mirror: true
+shoot: {
+type: ShootSpread
+shots: 3
+spread: 2.5
+}
+top: false
+rotate: false
+inaccuracy: 0
+reload: 30
+recoil: 3
+shootSound: shootBig
+ejectEffect: none
+bullet: {
+    type: BasicBulletType,
+    speed: 5
+    lifetime: 50
+    damage: 10
+    width: 10.5
+    height: 15
+    frontColor: a1e9ff
+    backColor: effbff
+    shootEffect: "shootSmall"
+    smokeEffect: "shootSmallSmoke"
+    collidesTiles: true
+    explodeRange: 1
+    splashDamageRadius: 1
+    splashDamage: 20
+    hitEffect: pointHit
+"fragVelocityMin": 0.8,
+      "fragVelocityMax": 1.5,
+      "fragBullets": 2,
+      "fragBullet": {
+        "speed": 4,
+        "collidesTiles": false,
+        "damage": 6,
+        "width": 6,
+        "heigth": 6,
+        lifetime: 5
+        despawnHit: true
+    }
+}
+}
+]
+research: {
+    parent: Reconstructor-mech
+}
+researchCostMultiplier: 0.2

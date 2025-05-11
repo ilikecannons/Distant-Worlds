@@ -1,0 +1,64 @@
+	"outlineColor": "424245",
+    outlineRadius: 3
+  "type": "legs",
+	"speed": 0.9,
+	"hitSize": 13,
+	"health": 2955,
+	"faceTarget": true,
+	"armor": 3,
+	"range": 342,
+	"targetAir": true,
+	"rotateSpeed": 2,
+            "legMoveSpace": 1,
+            "legMaxLength": 1.2,
+            "legMinLength": 0.3,
+            "legLengthScl": 0.96,
+            "legForwardScl": 0.5,
+            "legPhysicsLayer": true,
+         "legGroupSize": 2,
+         "legCount": 4,
+         "legExtension": 0,
+        "legContinuousMove": true,
+        "lockLegBase": false,
+        "rippleScale": 0.2,
+	"legBaseOffset": 0,
+	"legLength": 11, 
+	"hovering": false,
+	"immunities": [
+		"freezing"
+	],
+"weapons": [
+{
+name: spider-gun-c
+x: 6
+y: 0
+mirror: true
+shoot: {
+type: ShootPattern
+shots: 3
+shotDelay: 10
+}
+top: false
+inaccuracy: 5
+rotate: true
+reload: 60
+recoil: 2
+shootSound: lasershoot
+ejectEffect: none
+  bullet: {
+    type: SapBulletType
+    sapStrength: 0
+    length: 200
+    damage: 15
+    shootEffect: shootSmall
+    hitColor: c698c6
+    color: 9e5e9e
+    despawnEffect: none
+    width: 1
+    lifetime: 30
+    knockback: -8
+status: freezing
+statusDuration: 180
+}
+}
+]

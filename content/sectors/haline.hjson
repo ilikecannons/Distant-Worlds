@@ -1,0 +1,16 @@
+captureWave: 34
+difficulty: 1
+planet: Akrehela
+sector: 12
+loadout: polaris2
+overrideLaunchDefaults: true
+research: {
+  parent: fringe
+  objectives: [
+    {
+      type: SectorComplete
+      preset: fringe
+    }
+    Appulse
+  ]
+}

@@ -1,0 +1,22 @@
+name: Cadmium
+description: "A red metal, the most basic thing on Akrehela."
+color: FF2222
+hardness: 2
+explosiveness: 0
+flammability: 0
+radioactivity: 0
+charge: 0
+cost: 0.75
+buildable: true
+requiresUnlock: true
+alwaysUnlocked: true
+research: {
+    parent: "akrehela-Items",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "crash-site"
+        }
+    ]
+}
+hiddenOnPlanets: [serpulo, erekir]

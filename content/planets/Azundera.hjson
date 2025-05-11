@@ -1,0 +1,101 @@
+alwaysUnlocked: true
+localizedName: Azundera
+description: A small moon of Akrehela.
+    alwaysUnlocked: true
+    generator: "PlanetGenerator",
+    parent: "Akrehela",
+    iconColor: 80ced9,
+    orbitRadius: 3,
+    hasAtmosphere: true,
+    updateLighting: false,
+    atmosphereRadIn: 0,
+    atmosphereRadOut: 0,
+    atmosphereColor: 000000,
+    drawOrbit: true,
+    accessible: true,
+    alwaysUnlocked: true,
+    defaultCore: "redcore",
+    sectorSeed: 1,
+    startSector: 11,
+    sectorSize: 1,
+    clearSectorOnLose: true,
+    allowSectorInvasion: false,
+	allowLaunchToNumbered: false,
+    radius: 0.35,
+    hiddenItems: [
+        "copper",
+        "lead",
+        "scrap",
+        "graphite",
+        "coal",
+        "titanium",
+        "thorium",
+        "plastanium",
+        "phase-fabric",
+        "surge-alloy",
+        "spore-pod",
+        "sand",
+        "blast-compound",
+        "pyratite",
+        "metaglass",
+        "beryllium",
+        "oxide",
+        "tungsten",
+        "carbide",
+        "fissile-matter",
+        "dormant-cyst"
+    ],
+cloudMesh: [
+{
+  type: HexSkyMesh
+  planet: Azundera
+  seed: 239468721
+  speed: -4
+  radius: 0.21
+  divisions: 5
+  color: bebed7
+  octaves: 2
+  persistence: 1
+  scl: 3
+  thresh: 0.40
+}
+{
+  type: HexSkyMesh
+  planet: Azundera
+  seed: 501467895
+  speed: -6
+  radius: 0.2
+  divisions: 4
+  color: efefff
+  octaves: 5
+  persistence: 1
+  scl: 2
+  thresh: 0.45
+}
+{
+  type: HexSkyMesh
+  planet: Azundera
+  seed: 873926410
+  speed: -8
+  radius: 0.19
+  divisions: 3
+  color: 8d8daf
+  octaves: 4
+  persistence: 0.3
+  scl: 2
+  thresh: 0.5
+}
+]
+    "mesh": {
+      "type": "NoiseMesh",
+      "planet": "Azundera",
+      "seed": 98213476410874235087,
+      "color1": "5C6B9E",
+      "color2": "5C514C",
+      "divisions": 3,
+      "radius": 0.35,
+      "octaves": 10,
+      "persistence": 0.8,
+      "scale": 2,
+      "mag": 1
+    }

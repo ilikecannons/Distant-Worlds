@@ -1,0 +1,7 @@
+"name": "Xenon",
+"description": "Xenon Vents constantly spray it into the air, all you have to do is harness it.",
+"gas": true,
+"cache": "water",
+"barColor": "CD9DE9"
+color: CD9DE9
+gasColor: CD9DE9

@@ -1,0 +1,14 @@
+difficulty: 8
+planet: Akrehela
+sector: 35
+captureWave: 50
+loadout: antares1
+research: {
+  parent: secret-pass
+  objectives: [
+    {
+      type: SectorComplete
+      preset: secret-pass
+    }
+  ]
+}

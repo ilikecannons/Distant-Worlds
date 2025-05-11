@@ -1,0 +1,22 @@
+name: Sodium
+description: "Frozen sodium crystals. Extremely cold, do not lick it!"
+color: D3D397
+hardness: 1
+explosiveness: 0.6
+flammability: 0.3
+radioactivity: 0
+charge: 0
+cost: 1.5
+buildable: true
+requiresUnlock: true
+alwaysUnlocked: true
+research: {
+    parent: "quartz",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "cryoo-lake"
+        }
+    ]
+}
+hiddenOnPlanets: [serpulo, erekir]

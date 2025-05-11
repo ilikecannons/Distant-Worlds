@@ -1,0 +1,15 @@
+{
+        effect: {
+        type: ParticleEffect,
+        particles: 1,
+        region: "akrehela-triangle",
+        lifetime: 16,
+        length: 1,
+        sizeFrom: 2,
+        sizeTo: 4,
+        colorFrom: "2298a3",
+        colorTo: "55ecfa"
+        spin: 5
+        },
+        damage: 0.65
+}

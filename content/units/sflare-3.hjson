@@ -1,0 +1,62 @@
+    "type": "flying",
+    "lowAltitude": true,
+    "speed": 1.8,
+    "accel": 0.07,
+    "drag": 0.02,
+    "flying": true,
+    "health": 1470,
+    "hitSize": 15,
+    "armor": 3,
+    "itemCapacity": 30,
+    "buildSpeed": 1.4,
+    "buildBeamOffset": 18,
+  "outlineColor": "36363c",
+    "engineOffset": 14,
+    "faceTarget": true,
+weapons: [
+{
+name: sflare-body-weapon-b
+x: 0
+y: 0
+mirror: false
+heatColor: 84F491FF
+rotate: false
+shootCone: 40
+reload: 50
+shootSound: plasmadrop
+bullet: {
+    type: BasicBulletType
+    speed: 0.2
+    lifetime: 50
+    homingPower: 0.05
+    homingRange: 100
+    homingDelay: 2
+    maxRange: 20
+    damage: 50
+    splashDamage: 70
+    splashDamageRadius: 30
+    ignoreRotation: true
+    collidesAir: false
+    width: 8
+    height: 8
+    spin: 3
+    keepVelocity: false
+    inaccuracy: 360
+    healAmount: 20
+    spin: 2
+    collidesTeam: true
+    collides: true
+    backColor: 55ff55
+    frontColor: FFFFFF
+    mixColorTo: FFFFFF
+    hitSound: plasmaboom
+    hitShake: 3.5
+    despawnHit: true
+    trailLength: 5
+    hitEffect: [massiveExplosion]
+    shootEffect: none
+    backSprite: akrehela-steam
+    sprite: akrehela-steam
+}
+}
+ ] 

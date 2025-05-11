@@ -1,0 +1,22 @@
+name: Quartz
+description: Crystalline building material commonly used on Akrehela.
+color: FFFFFF
+hardness: 3
+explosiveness: 0
+flammability: 0
+radioactivity: 0
+charge: 0
+cost: 2
+buildable: true
+requiresUnlock: true
+alwaysUnlocked: true
+research: {
+    parent: "cadmium",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "crash-site"
+        }
+    ]
+}
+hiddenOnPlanets: [serpulo, erekir]

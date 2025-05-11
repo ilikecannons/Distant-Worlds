@@ -1,0 +1,22 @@
+name: Red Sand
+description: "It's sand that was tinted red due to carbon-cadmium alloy and trinitrotoluene impurities. It is extremely volatile. Handle with care."
+color: BD7B58
+hardness: 1
+explosiveness: 0.8
+flammability: 0.5
+radioactivity: 0
+charge: 0
+cost: 1
+buildable: false
+requiresUnlock: true
+alwaysUnlocked: true
+research: {
+  parent: cadmium
+  objectives: [
+    {
+      type: OnSector
+      preset: crash-site
+    }
+  ]
+}
+hiddenOnPlanets: [serpulo, erekir]

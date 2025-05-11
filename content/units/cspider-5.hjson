@@ -1,0 +1,204 @@
+	"outlineColor": "36363c",
+  "type": "legs",
+	"speed": 0.30,
+	"hitSize": 24,
+	"health": 17340,
+	"faceTarget": true,
+	"armor": 7,
+	"range": 160,
+	"targetAir": true,
+	"rotateSpeed": 1,
+            "legMoveSpace": 1,
+            "legMaxLength": 1.2,
+            "legMinLength": 0.3,
+            "legLengthScl": 0.96,
+            "legForwardScl": 0.3,
+            "legPhysicsLayer": false,
+         "legGroupSize": 2,
+         "legCount": 4,
+         "legExtension": 0,
+        "legContinuousMove": true,
+        "lockLegBase": true,
+        "rippleScale": 0.2,
+	"legBaseOffset": 0,
+	"legLength": 24, 
+	"allowLegStep": true,
+	"hovering": false,
+	"immunities": [
+		"freezing"
+	],
+weapons: [
+{
+    "name": "spider-gun-b",
+    "reload": 30,
+    "mirror": true,
+    "x": 3,
+    "y": 0,
+    "shootY": 2,
+    "recoil": 1,
+    "rotate": false,
+    "shootCone": 15,
+"shoot": {
+"type": "shootPattern",
+ "shots": 10,
+ "shotDelay": 17,
+}
+    shootSound: pew
+    bullet: {
+    type: BasicBulletType
+      speed: 8
+      sprite: akrehela-energy-spear
+      lifetime: 25
+      inaccuracy: 15
+      damage: 33
+      width: 6
+      height: 36
+        frontColor: eeeeee
+        backColor: ffffff
+      despawnHit: true
+      despawnEffect: none
+      "fragVelocityMin": 0.7,
+      "fragVelocityMax": 2,
+      "fragBullets": 3,
+      "fragBullet": {
+        "speed": 4,
+        "collidesTiles": false,
+        "damage": 8,
+        "width": 6,
+        "heigth": 6,
+        lifetime: 6
+        despawnHit: true
+      }
+      hitEffect: [
+        {
+          type: ParticleEffect
+          particles: 6
+          line: true
+          lifetime: 25
+          length: 20
+          lenFrom: 5
+          lenTo: 0
+          strokeFrom: 2
+          strokeTo: 0
+          colorFrom: 03f8fc
+          colorTo: ffffff
+        }
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 15
+          lifetime: 20
+          strokeFrom: 3.5
+          strokeTo: 0
+          colorFrom: 03f8fc
+          colorTo: ffffff
+        }
+      ]
+    }
+  }
+{
+name: cspider-gun-e
+mirror: true
+x: 12
+y: 5
+top: true
+rotate: true
+reload: 100
+recoil: 7
+shootSound: RevelationSound
+velocityRnd: 0.2
+ejectEffect: none
+    "bullet": { 
+    "colors":["00ffff", "99ffff", "FFFFFFF"],
+      "type": "LaserBulletType",
+      "length": 300,
+      "width": 30,
+      "damage": 85,
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "11dcf2",
+                "colorTo": "11dcf2",
+                "sizeFrom": 1,
+                "sizeTo": 20,
+                "lifetime": 10
+            }
+            {
+              type: ParticleEffect
+              particles: 5
+              lifetime: 30
+              length: 10
+              sizeFrom: 3
+              sizeTo: 0
+              colorFrom: ffffff
+              colorTo: adfaff
+              strokeFrom: 3
+              strokeTo: 1.5
+              interp: pow3Out
+              spin: 5
+              sizeInterp: pow2In
+              region: akrehela-triangle
+            }
+        ]
+    }
+}
+}
+{
+    "name": "cspider-gun-f",
+    "reload": 222,
+    "mirror": false,
+    "heatColor": FFFFFF,
+    "cooldownTime": 150,
+    "x": 0,
+    "y": 0,
+    "shootY": 5,
+    "recoil": 0,
+    "rotate": false,
+    shootSound: railgun
+    bullet: {
+    type: BasicBulletType
+      speed: 3
+      sprite: akrehela-halo-shot
+      shrinkX: 0
+      shrinkY: 0
+      spin: 5
+      lifetime: 160
+      inaccuracy: 0
+      damage: 160
+      splashDamage: 100
+      splashDamageRadius: 60
+      width: 24
+      height: 24
+      frontColor: 99ccff
+      backColor: ffffff
+      despawnHit: true
+      despawnEffect: [scatheExplosion]
+      hitEffect: [scatheExplosion]
+      "fragVelocityMin": 1,
+      "fragVelocityMax": 2.5,
+      "fragBullets": 3,
+      "fragBullet": {
+        "speed": 6,
+        "collidesTiles": false,
+        "damage": 8,
+        "width": 6,
+        "heigth": 6,
+        lifetime: 15
+        despawnHit: true
+      }
+    }
+  }
+
+]
+"abilities": [
+            {
+            "type": "mindustry.entities.abilities.ForceFieldAbility",
+            "radius": 60,
+            "regen": 1.1,
+            "max": 1200,
+            "cooldown": 380,
+            sides: 6
+            },
+        ]

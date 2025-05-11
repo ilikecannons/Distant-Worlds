@@ -1,0 +1,154 @@
+    "type": "flying",
+    "lowAltitude": true,
+    "speed": 3.2,
+    "accel": 0.07,
+    "drag": 0.02,
+    "flying": true,
+    "health": 800,
+    "hitSize": 7,
+    "armor": 1,
+    "itemCapacity": 30,
+  "outlineColor": "36363c",
+    "engineOffset": 6,
+    "faceTarget": true,
+weapons: [
+{
+name: sflare-body-weapon-a
+x: 0
+y: 3
+mirror: false
+heatColor: 84F491FF
+shoot: {
+  firstShotDelay: 150
+}
+"chargeSound": "laser-charge"
+"shootStatus": "unmoving"
+"shootStatusDuration": 160
+parentizeEffects: true
+rotate: false
+reload: 180
+shootSound: BigShootSound
+ejectEffect: none
+bullet: {
+    type: BasicBulletType
+    speed: 4
+    lifetime: 40
+    homingPower: 0.05
+    homingRange: 100
+    homingDelay: 15
+    damage: 10
+    "shoot": {
+"type": "shootHelix",
+mag: 1.5
+offset: 0
+scl: 4
+ "shots": 1,
+    "shotDelay": 5,
+}
+    width: 8
+    height: 8
+    spin: 3
+    inaccuracy: 3
+    healAmount: 20
+    collidesTeam: true
+    collides: true
+    backColor: 64f450
+    frontColor: 41e860 
+    smokeEffect: "shootSmallSmoke"
+      "fragVelocityMin": 0.3,
+      "fragVelocityMax": 1.5,
+      "fragBullets": 3,
+      despawnHit: true
+      "fragBullet": {
+        "speed": 2,
+        "collidesTiles": false,
+        "damage": 3,
+        "width": 6,
+        "height": 6,
+        lifetime: 30
+        "fragVelocityMin": 0.3,
+        "fragVelocityMax": 1.5,
+          "fragBullets": 3,
+          despawnHit: true
+          "fragBullet": {
+            "speed": 2,
+            "collidesTiles": false,
+            "damage": 3,
+            "width": 6,
+            "height": 6,
+            lifetime: 15
+          }
+
+      }
+    trailChance: 1
+    trailEffect: {
+    type: ParticleEffect
+    particles: 1
+    length: 0
+    lifetime: 10
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: 64f450
+    colorTo: 2ddb4e
+    region: particle
+      }
+            "chargeEffect": {
+            "type": "multiEffect",
+            "lifetime": 120,
+            "effects": [
+                {
+                    "type": "WaveEffect",
+                    "lifetime": 120,
+                    "sizeFrom": 7,
+                    "sizeTo": 0,
+                    "strokeFrom": 0,
+                    "strokeTo": 3,
+                    "colorFrom": "62AE7FFF",
+                    "colorTo": "84F491FF",
+                },
+            ]
+        }
+    hitEffect: {
+    type: WaveEffect
+    lifetime: 15
+    sizeFrom: 0
+    sizeTo: 15
+    strokeFrom: 8
+    strokeTo: 0
+    colorFrom: 64f450
+    colorTo: 2ddb4e
+  }
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "64f450",
+                "colorTo": "2ddb4e",
+                "sizeFrom": 0,
+                "sizeTo": 6,
+                "lifetime": 10
+                strokeFrom: 5
+                strokeTo: 0
+            }
+        ]
+    }
+    backSprite: akrehela-glowystar
+    sprite: akrehela-star
+    shrinkX: 0
+    shrinkY: 0
+    trailChance: 1
+    trailEffect: {
+    type: ParticleEffect
+    particles: 1
+    length: 0
+    lifetime: 15
+    sizeFrom: 7
+    sizeTo: 0
+    colorFrom: 64f450
+    colorTo: 2ddb4e
+    region: particle
+  }
+}
+}
+ ] 

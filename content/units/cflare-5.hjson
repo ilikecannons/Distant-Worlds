@@ -1,0 +1,277 @@
+    "type": "flying",
+    "lowAltitude": true,
+    "speed": 1,
+    "accel": 0.06,
+    "drag": 0.02,
+    "flying": true,
+    "health": 7654,
+    "hitSize": 12,
+    "armor": 4,
+    "itemCapacity": 30,
+    "outlineColor": "36363c",
+    "engineOffset": 10,
+    "engineSize": 4,
+    "faceTarget": true,
+weapons: [
+{
+name: cflare-gun-c
+x: 8
+y: 0
+mirror: false
+shoot: {
+  type: ShootPattern
+  shots: 1
+  shotDelay: 1
+}
+top: false
+rotate: false
+reload: 100
+recoil: 4
+shootSound: shotgun
+ejectEffect: none
+  bullet: {
+    "type": "shrapnelBulletType",
+    "lifetime": 85,
+    "damage": 85,
+    serrations: 1
+    serrationSpacing: 0
+    serrationLenScl: 17
+    serrationWidth: 9
+    hitLarge: true
+    "fromColor": "ffffccff",
+    "toColor": "99994499",
+    "length": 200,
+    "width": 8,
+    "hitEffect": "blastExplosion",
+    shootEffect: {
+      "type": "ParticleEffect",
+      "line": false,
+      "particles": 15,
+      "offset": 0,
+      "lifetime": 75,
+      "length": -55,
+      "cone": 15,
+      "sizeFrom": 3,
+      "sizeTo": 0,
+      "interp": "pow2Out",
+      "sizeInterp": "pow2In",
+      "colorFrom": "FFFFFFCE",
+      "colorTo": "F9EF9238"
+    }
+    "pierce": true,
+    "pierceCap": 20,
+    "smokeEffect": "hitBulletBig"
+    trailInterval: 3
+    trailEffectChance: -1
+    "trailEffect": {
+      "type": "ParticleEffect",
+      "line": false,
+      "particles": 1,
+      "offset": 0,
+      "lifetime": 75,
+      "length": 25,
+      "cone": 180,
+      "sizeFrom": 2,
+      "sizeTo": 0,
+      "interp": "pow2Out",
+      "sizeInterp": "pow2Out",
+      "colorFrom": "FFFFFFCE",
+      "colorTo": "92C2F938"
+    }
+  }
+}
+{
+    "name": "cflare-gun-c-inv",
+    "reload": 80,
+    "mirror": false,
+    "x": -8,
+    "y": 0,
+    "shootY": 2,
+    "recoil": 1,
+    "rotate": true,
+    "shootCone": 15,
+    "velocityRnd": 0.2,
+    "shoot": {
+      "type": "shootPattern",
+      "shots": 4,
+      "shotDelay": 0,
+    }
+    shootSound: explosion
+    bullet: {
+    type: ArtilleryBulletType
+      speed: 3
+      inaccuracy: 5
+      sprite: akrehela-steam
+      lifetime: 50
+      inaccuracy: 5
+      damage: 90
+      width: 12
+      height: 12
+      hitSound: none
+        frontColor: eeeeee
+        backColor: ffffff
+      despawnHit: true
+      despawnEffect: none
+      "fragVelocityMin": 1,
+      "fragVelocityMax": 1,
+      "fragBullets": 3,
+      "fragSpread": 120,
+      "fragRandomSpread": 0,
+      "fragBullet": {
+        "speed": 1,
+        "collidesTiles": false,
+        "damage": 25,
+        "width": 6,
+        "heigth": 6,
+        lifetime: 24
+        despawnHit: true
+      }
+      hitEffect: [
+        {
+          type: ParticleEffect
+          particles: 6
+          line: true
+          lifetime: 25
+          length: 20
+          lenFrom: 5
+          lenTo: 0
+          strokeFrom: 2
+          strokeTo: 0
+          colorFrom: 03f8fc
+          colorTo: ffffff
+        }
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 15
+          lifetime: 20
+          strokeFrom: 3.5
+          strokeTo: 0
+          colorFrom: 03f8fc
+          colorTo: ffffff
+        }
+      ]
+    }
+  }
+{
+name: sflare-body-weapon-b
+x: 0
+y: 20
+mirror: false
+shake: 10
+alternate: false
+heatColor: 84F491FF
+trailRotation: true
+rotate: true
+shootCone: 40
+baseRotation: 0
+inaccuracy: 0
+reload: 130
+shootSound: railgun
+recoil: 0
+bullet: {
+    type: BasicBulletType
+    speed: 3
+    lifetime: 120
+    damage: 255
+    width: 12
+    height: 12
+    spin: 3
+    recoil: 2
+    inaccuracy: 0
+    healAmount: 80
+    collidesTeam: true
+    collides: true
+    backColor: 64f450
+    frontColor: 41e860 
+    trailColor: 41e860 
+    shootEffect: colorSpark
+    trailEffect: colorSpark
+    trailEffectChance: -1
+    trailInterval: 3
+      "fragVelocityMin": 1,
+      "fragVelocityMax": 1,
+      "fragBullets": 3,
+      despawnHit: true
+      trailLength: 5
+      hitEffect: [scatheExplosion]
+    fragSpread: 120
+    fragRandomSpread: 0
+    fragBullets: 3
+    fragBullet: {
+      type: BasicBulletType
+      speed: 2
+      width: 14
+      length: 20
+      lifetime: 20
+      pierce: true
+      pierceBuilding: true
+      damage: 30
+      fragSpread: 90
+      fragRandomSpread: 0
+      fragBullets: 4
+      "fragVelocityMin": 1,
+      "fragVelocityMax": 1,
+      fragBullet: {
+        type: BasicBulletType
+        speed: 2
+        width: 7
+        length: 10
+        lifetime: 20
+        pierce: true
+        pierceBuilding: true
+        damage: 30
+        hitEffect: [pointHit]
+        fragSpread: 90
+        fragRandomSpread: 0
+        fragBullets: 4
+        rotation: 45
+        fragBullet: {
+          type: LaserBulletType
+          buildingDamageMultiplier: 0.25
+          width: 18
+          length: 40
+          sideAngle: 175
+          sideWidth: 1
+          sideLength: 40
+          lifetime: 80
+          pierce: true
+          pierceBuilding: true
+          damage: 20
+        }
+      }
+    }
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "64f450",
+                "colorTo": "2ddb4e",
+                "sizeFrom": 0,
+                "sizeTo": 6,
+                "lifetime": 10
+                strokeFrom: 5
+                strokeTo: 0
+            }
+        ]
+    }
+    shootEffect: colorSpark
+    backSprite: akrehela-glowystar
+    sprite: akrehela-star1
+    shrinkX: 0
+    shrinkY: 0
+}
+}
+]
+"abilities": [
+            {
+            "type": "mindustry.entities.abilities.ForceFieldAbility",
+            "radius": 70,
+            "regen": 0.9,
+            "max": 800,
+            "cooldown": 300,
+            "sides": 4,
+            rotation: 45
+            }
+]

@@ -1,0 +1,125 @@
+    "type": "flying",
+    "lowAltitude": true,
+    "speed": 1.4,
+    "accel": 0.07,
+    "drag": 0.02,
+    "flying": true,
+    "health": 6890,
+    "hitSize": 30,
+    "armor": 4,
+    "itemCapacity": 30,
+  "outlineColor": "36363c",
+    mineTier: 3,
+    mineSpeed: 9,
+    buildSpeed: 2,
+    buildBeamOffset: 18,
+    "engineOffset": 16,
+    "engineSize": 8,
+    "faceTarget": true,
+weapons: [
+{
+name: sflare-body-weapon-b
+x: 0
+y: 0
+mirror: false
+shake: 5
+alternate: false
+heatColor: 84F491FF
+trailRotation: true
+rotate: true
+shootCone: 40
+baseRotation: 0
+inaccuracy: 0
+"shoot": {
+"type": "shootHelix",
+mag: 1.5
+offset: 0
+scl: 4
+ "shots": 1,
+    "shotDelay": 0,
+}
+reload: 100
+shootSound: railgun
+bullet: {
+    type: BasicBulletType
+    speed: 3
+    lifetime: 170
+    damage: 200
+    width: 12
+    height: 12
+    spin: 3
+    inaccuracy: 0
+    healAmount: 50
+    collidesTeam: true
+    collides: true
+    backColor: 64f450
+    frontColor: 41e860 
+    trailColor: 41e860 
+    shootEffect: colorSpark
+    trailEffect: colorSpark
+    trailEffectChance: -1
+    trailInterval: 3
+      "fragVelocityMin": 0.3,
+      "fragVelocityMax": 1.5,
+      "fragBullets": 3,
+      despawnHit: true
+      trailLength: 5
+      hitEffect: [scatheExplosion]
+    fragSpread: 72
+    fragRandomSpread: 0
+    fragBullets: 5
+    fragBullet: {
+      type: LaserBulletType
+      buildingDamageMultiplier: 0.25
+      width: 18
+      length: 30
+      sideAngle: 175
+      sideWidth: 1
+      sideLength: 40
+      lifetime: 80
+      pierce: true
+      pierceBuilding: true
+      damage: 20
+    }
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "64f450",
+                "colorTo": "2ddb4e",
+                "sizeFrom": 0,
+                "sizeTo": 6,
+                "lifetime": 10
+                strokeFrom: 5
+                strokeTo: 0
+            }
+        ]
+    }
+    shootEffect: colorSpark
+    backSprite: akrehela-glowystar
+    sprite: akrehela-star1
+    shrinkX: 0
+    shrinkY: 0
+}
+}
+ ] 
+"abilities": [
+            {
+            "type": "mindustry.entities.abilities.ForceFieldAbility",
+            "radius": 60,
+            "regen": 0.9,
+            "max": 1000,
+            "cooldown": 500,
+            sides: 5
+            },
+            {
+            "type": "mindustry.entities.abilities.EnergyFieldAbility",
+            "reload": 40,
+            "top": false,
+            "damage": 10,
+            "radius": 40,
+            "maxTargets": 10,
+            "healPercent": 1.5,
+            }
+        ]

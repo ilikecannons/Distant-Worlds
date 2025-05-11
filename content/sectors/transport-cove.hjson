@@ -1,0 +1,13 @@
+difficulty: 2
+planet: Akrehela
+sector: 27
+loadout: antares1
+research: {
+  parent: cryoo-lake
+  objectives: [
+    {
+      type: SectorComplete
+      preset: cryoo-lake
+    }
+  ]
+}

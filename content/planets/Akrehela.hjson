@@ -1,0 +1,117 @@
+alwaysUnlocked: true
+localizedName: Akrehela
+description: Akrehela used to be a moon of Erekir, until another planet came by, and flung it away from the sun. Now, it is just a frozen wasteland, but we detected extreme weapon energy signatures on the planet, seemingly preparing to obliterate Serpulo. Destroy it before it destroys us...
+    alwaysUnlocked: true
+    generator: "PlanetGenerator",
+    parent: "sun",
+    iconColor: 80ced9,
+    orbitRadius: 80,
+    hasAtmosphere: true,
+    updateLighting: false,
+    atmosphereRadIn: 0.08,
+    atmosphereRadOut: 0.35,
+    atmosphereColor: 4caed9,
+    drawOrbit: true,
+    accessible: true,
+    defaultCore: "redcore",
+    sectorSeed: 82376445836573,
+    startSector: 8,
+    sectorSize: 1,
+    clearSectorOnLose: true,
+    allowSectorInvasion: false,
+	allowLaunchToNumbered: false,
+    radius: 1,
+    hiddenItems: [
+        "copper",
+        "lead",
+        "scrap",
+        "graphite",
+        "coal",
+        "titanium",
+        "thorium",
+        "silicon",
+        "plastanium",
+        "phase-fabric",
+        "surge-alloy",
+        "spore-pod",
+        "sand",
+        "blast-compound",
+        "pyratite",
+        "metaglass",
+        "beryllium",
+        "oxide",
+        "tungsten",
+        "carbide",
+        "fissile-matter",
+        "dormant-cyst"
+    ],
+cloudMesh: [
+{
+    type: HexSkyMesh
+    planet: Akrehela
+    seed: 87916234
+    speed: 0.9
+    radius: 0.14
+    divisions: 4
+    color: 55FFFFFF
+    octaves: 6
+    persistence: 0.2
+    scl: 0.80
+    thresh: 0.4
+}
+{
+    type: HexSkyMesh
+    planet: Akrehela
+    seed: 12098673
+    speed: 0.4
+    radius: 0.13
+    divisions: 6
+    color: A490A7FF
+    octaves: 3
+    persistence: 0.3
+    scl: 0.80
+    thresh: 0.4
+}
+]
+
+    "mesh": [
+      {
+        "type": "NoiseMesh",
+        "planet": "Akrehela",
+       "seed": 12093765418,
+        "color1": "12F9FF",
+        "color2": "FFFFFF",
+        "divisions": 5,
+        "radius": 1,
+        "octaves": 10,
+        "persistence": 0.6,
+        "scale": 3,
+        "mag": 0.9
+      }
+      {
+        "type": "NoiseMesh",
+        "planet": "Akrehela",
+       "seed": 12093765418,
+        "color1": "BFBAA4",
+        "color2": "A29D87",
+        "divisions": 4,
+        "radius": 1,
+        "octaves": 3,
+        "persistence": 0.8,
+        "scale": 2,
+        "mag": 0.7
+      }
+      {
+        "type": "NoiseMesh",
+        "planet": "Akrehela",
+       "seed": 9184523762135,
+        "color1": "C59F9F",
+        "color2": "9A5757",
+        "divisions": 4,
+        "radius": 1.04,
+        "octaves": 6,
+        "persistence": 0.4,
+        "scale": 2,
+        "mag": 0.4
+      }
+    ]

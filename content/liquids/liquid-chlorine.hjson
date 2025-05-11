@@ -1,0 +1,7 @@
+"name": "Chlorine",
+"description": "Chlorine gas, do not lick it",
+"gas": true,
+"cache": "water",
+"barColor": "6ABD6B"
+color: 6ABD6B
+gasColor: 6ABD6B
