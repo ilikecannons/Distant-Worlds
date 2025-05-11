@@ -1,0 +1,37 @@
+#the mod name as displayed in-game
+displayName: "[#990099]Distant Worlds[]"
+
+#the internal name of your mod
+name: "akrehela"
+
+#your name
+author: "i like cannons"
+
+#the mod description as seen in the mod dialog
+description: "
+
+Welcome to Akrehela! Here you can research new cold-resistant things, build new units, and stop a core cracker!
+Explore and conquer with over 100 peices of new content and 10 sectors!
+Obliterate your enemies with 18 new units! or let them obliterate you o_o
+
+Disclaimer(s): This mod is not for beginners or the impatient. Extreme skill and paitence are required to beat this mod; and the translations provided may not be accurate. If you find any translation errors, please report them to me.
+
+You need to destroy the enemy before they destroy you.
+Time is running out...
+
+This mod is in a beta version. I do not know when the mod will be finished, I will not set any deadlines.
+Mod version: v0.6 beta
+
+Available in only English for the moment, I'm working on a French translation."
+
+#the mod version
+version: 0.62
+
+#the minimum game build required to run this mod
+minGameVersion: 145
+
+#this is a java mod
+java: false
+
+#the mod description as seen in the mod dialog
+subtitle: "Currently in development!"
