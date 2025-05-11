@@ -1,0 +1,20 @@
+  "name": "Micron Drill",
+  "description": "First tier of drills, the weakest of them all."
+  "type": "Drill",
+  hasLiquids: false
+  "size": 1,
+  "itemCapacity": 7,
+  "tier": 2,
+  "drillTime": 315,
+  "drawMineItem": true,
+  "drawRim": true
+  "heatColor": 5ea1f2
+  liquidBoostIntensity: 1
+  requirements: [
+    cadmium/7
+  ]
+  "category": "production",
+research: {
+    parent: "akrehela-Drills",
+    }
+researchCostMultiplier: 0.1

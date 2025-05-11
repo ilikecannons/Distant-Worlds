@@ -1,0 +1,17 @@
+type: OverflowGate
+name: Iverted Cadmium Overflow Gate
+description: If the sides are filled, it outputs to the front.
+health: 65
+invert: true
+requirements: [
+  cadmium/4
+  quartz/1
+] 
+category: distribution
+research: {
+    parent: cadmium-overflow-gate
+},
+researchCost: [
+    cadmium/100
+	quartz/25
+  ]

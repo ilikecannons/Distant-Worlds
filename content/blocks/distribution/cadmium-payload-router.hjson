@@ -1,0 +1,12 @@
+type: PayloadRouter
+name: Cadmium Payload Router
+description: that's a very big router
+size: 3
+moveTime: 70
+moveForce: 400
+payloadLimit: 3
+category: units
+requirements: [
+  cadmium/16
+  carborundum/10
+]

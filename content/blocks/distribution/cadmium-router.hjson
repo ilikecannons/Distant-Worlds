@@ -1,0 +1,15 @@
+type: Router 
+name: Cadmium Router
+description: A router made of Cadmium.
+health: 70
+itemCapacity: 4
+requirements: [
+  cadmium/4
+] 
+category: distribution
+research: {
+    parent: cadmium-conveyor
+},
+researchCost: [
+    cadmium/24
+  ]

@@ -1,0 +1,24 @@
+    "type": "Wall",
+	"name": "Large Sodium Wall",
+	"description": "Do I need to say it again?"
+    "scaledHealth": 250,
+    "size": 2,
+	absorbLasers: false
+    chanceDeflect: 0.1
+	hasPower: false
+    category: defense
+requirements: [
+  sodium/24
+]
+research: {
+  parent: sodium-wall,
+  objectives: [
+    {
+      type: "OnSector",
+      preset: "cryoo-lake"
+    }
+  ]
+}
+researchCost: [
+  sodium/300
+]

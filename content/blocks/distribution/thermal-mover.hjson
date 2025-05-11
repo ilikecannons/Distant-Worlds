@@ -1,0 +1,27 @@
+type: HeatConductor
+name: Thermal Propulsor
+description: moves heat
+size: 1
+category: distribution
+research: carbonic-burner
+splitHeat: false
+requirements: [
+  carborundum/2
+  lithium/5
+]
+regionRotated1: 1
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawHeatOutput
+    }
+    {
+      type: DrawHeatInput
+      suffix: -heat
+    }
+  ]
+}

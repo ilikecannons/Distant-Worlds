@@ -1,0 +1,29 @@
+type: Pump
+name: Quartz Pump
+description: Pumps liquids.
+health: 245
+size: 2
+pumpAmount: 0.2
+squareSprite: false
+category: liquid
+hasPower: true
+consumes: {
+power: 0.25
+  }
+requirements: [
+  quartz/45
+  iceshard/20
+]
+research: {
+  parent: akrehela-Liquid,
+  objectives: [
+    {
+      type: "OnSector",
+      preset: "cryoo-lake"
+    }
+  ]
+}
+researchCost: [
+    quartz/180
+    iceshard/70
+  ]

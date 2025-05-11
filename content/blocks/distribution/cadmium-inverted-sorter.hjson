@@ -1,0 +1,13 @@
+type: Sorter
+name: Inverted Cadmium Sorter
+invert: true
+description: Does the opposite of a normal sorter. What did you expect?
+health: 80
+requirements: [
+   cadmium/5
+] 
+category: distribution
+research: cadmium-sorter
+researchCost: [
+    cadmium/100
+  ]

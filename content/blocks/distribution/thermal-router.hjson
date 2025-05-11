@@ -1,0 +1,27 @@
+type: HeatConductor
+name: Thermal Splitter
+description: routes heat
+size: 1
+category: distribution
+research: thermal-mover
+splitHeat: true
+requirements: [
+  carborundum/7
+  lithium/12
+]
+regionRotated1: 1
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawHeatOutput
+    }
+    {
+      type: DrawHeatInput
+      suffix: -heat
+    }
+  ]
+}

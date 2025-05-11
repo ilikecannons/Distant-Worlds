@@ -1,0 +1,24 @@
+    "type": "Wall",
+	"name": "Carborundum Wall",
+	"description": "Strong, sturdy wall."
+        "details": "It does not taste good. Beleive me, I've tried.",
+    "health": 400,
+    "size": 1,
+	absorbLasers: true
+	hasPower: false
+    category: defense
+requirements: [
+  carborundum/6
+]
+research: {
+  parent: sodium-wall,
+  objectives: [
+    {
+      type: "SectorComplete",
+      preset: "transport-cove"
+    }
+  ]
+}
+researchCost: [
+  carborundum/300
+]

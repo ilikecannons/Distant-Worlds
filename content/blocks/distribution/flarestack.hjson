@@ -1,0 +1,16 @@
+   "type": "Incinerator",
+    "name": "Flarestack",
+    "description": "Burns inputted items with dark magic",
+    "details": "\"Burn it in a flarestack.\" - me"
+    "health": 116,
+    "size": 1,
+  hasPower: true
+  power: 0.16
+    "consumes": {
+      "power": 0.1
+    }
+requirements: [
+  cadmium/16
+  carbon/10
+  carborundum/5
+]

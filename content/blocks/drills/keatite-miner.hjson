@@ -1,0 +1,32 @@
+type: WallCrafter
+name: Keatite Mining Unit
+description: Mines keatite from walls. Keatite is found in ice or keatite walls.
+details: Keatite is hard to extract, so more advanced equipment is required.
+size: 2
+category: production
+requirements: [
+  cadmium/16
+  carbon/6
+]
+consumes: {
+  power: 0.2
+}
+drillTime: 240
+output: keatite
+attribute: keatite
+ambientSound: drill
+ambientSoundVolume: 0.08
+squareSprite: false
+research: {
+    parent: ice-miner,
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "cryoo-lake"
+        }
+    ]
+  }
+researchCost: [
+  cadmium/100
+  carbon/45
+]

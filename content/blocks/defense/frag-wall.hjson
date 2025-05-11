@@ -1,0 +1,16 @@
+    "type": "ShieldWall",
+	"name": "Fragment Wall",
+	"description": "Takes power to create a graviton force shield",
+    "health": 780,
+    "size": 1,
+	absorbLasers: true
+	hasPower: false
+    category: defense
+    "lightningSound": "spark",
+    "lightningChance": 0.1,
+    "lightningColor": "F37979FF",
+    "lightningDamage": 50,
+    "lightningLength":28,
+requirements: [
+  metallic-frag/6
+]

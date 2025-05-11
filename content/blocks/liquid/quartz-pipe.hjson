@@ -1,0 +1,29 @@
+type: Conduit
+name: Quartz Pipeline
+description: A pipeline for liquids.
+leaks: true
+health: 15
+hasPower: false
+junctionReplacement: quartz-pipe-junction
+bridgeReplacement: quartz-pipe-bridge
+requirements: [
+  quartz/1
+  iceshard/1
+]
+research: {
+  parent: quartz-pump,
+  objectives: [
+    {
+      type: "OnSector",
+      preset: "cryoo-lake"
+    }
+  ]
+}
+liquidCapacity: 6
+liquidPressure: 1
+botColor: 4a4b53
+category: liquid
+researchCost: [
+    quartz/60
+    iceshard/60
+  ]

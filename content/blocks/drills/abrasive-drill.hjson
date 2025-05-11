@@ -1,0 +1,54 @@
+  "name": "Abrasion Drill",
+  "description": "Uses abrasives to mine better"
+  "type": "Drill",
+  hasLiquids: false
+  hasPowe: false
+  "size": 2,
+  "itemCapacity": 16,
+  "tier": 3,
+  "drillTime": 200,
+  "drawMineItem": true,
+  "updateEffect": {
+    type: RadialEffect
+    layer: 118
+    rotationSpacing: 80
+    amount: 2
+    lengthOffset: 6
+    effect: {
+      particles: 4
+      length: 90
+      lifetime: 200
+      cone: 40
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 0
+      sizeTo: 5
+      colorFrom: 9fa6b999
+      colorTo: 21377200
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 111
+    }
+  }
+
+  liquidBoostIntensity: 1
+  requirements: [
+    cadmium/16
+    purifiedsand/7
+    carborundum/12
+  ]
+  "category": "production",
+research: {
+    parent: "micron-drill",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "golden-island"
+        }
+    ]
+},
+researchCost: [
+  cadmium/1100
+  purifiedsand/800
+  carborundum/900
+]

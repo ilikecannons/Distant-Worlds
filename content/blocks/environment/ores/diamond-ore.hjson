@@ -1,0 +1,8 @@
+{
+"type": "OreBlock",
+"oreDefault": true,	
+"oreScale": 22.380953,
+"oreThreshold": 0.765,
+"variants": 3,
+"itemDrop": "diamond"
+}

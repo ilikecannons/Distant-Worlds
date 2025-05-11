@@ -1,0 +1,24 @@
+    "type": "Wall",
+	"name": "Sodium Wall",
+	"description": "A less basic wall for defending the core. Explosive, do not lick it."
+    "health": 250,
+    "size": 1,
+	absorbLasers: false
+    chanceDeflect: 0.1
+	hasPower: false
+    category: defense
+requirements: [
+  sodium/6
+]
+research: {
+  parent: cadmium-wall,
+  objectives: [
+    {
+      type: "OnSector",
+      preset: "cryoo-lake"
+    }
+  ]
+}
+researchCost: [
+  sodium/75
+]

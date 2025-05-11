@@ -1,0 +1,27 @@
+    "type": "Wall",
+	"name": "Large Golden Wall",
+	"description": "Large golden-lithium alloy wall, can absorb lasers."
+        "details": "it's made oF GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOLD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+    "scaledHealth": 550,
+    "size": 2,
+	absorbLasers: true
+    chanceDeflect: 0.1
+	hasPower: false
+    category: defense
+requirements: [
+  gold/16
+  lithium/8
+]
+research: {
+  parent: golden-wall,
+  objectives: [
+    {
+      type: "OnSector",
+      preset: "golden-island"
+    }
+  ]
+}
+researchCost: [
+  gold/800
+  lithium/400
+]

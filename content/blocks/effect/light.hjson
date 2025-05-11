@@ -1,0 +1,24 @@
+type: LightBlock
+name: Illuminator
+consumes:{
+power: 0.1
+}
+category: effect
+requirements: [
+  carbon/17
+  iceshard/6
+]
+radius: 60
+research: {
+    parent: "akrehela-Effect",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "lakebed"
+        }
+    ]
+}
+researchCost: [
+  carbon/55
+  iceshard/30
+]

@@ -1,0 +1,19 @@
+type: MassDriver
+name: Maglev Coilgun
+description: Shoots resources to other coilguns in range using gravitic levitation. Takes power.
+size: 3
+squareSprite: false
+itemCapacity: 85
+reload: 120
+range: 1000
+consumes: {
+  power: 1.8
+}
+category: distribution
+research: 0
+requirements: [
+  diamond/15
+  cadmium/90
+  carborundum/55
+  carbon/80
+]

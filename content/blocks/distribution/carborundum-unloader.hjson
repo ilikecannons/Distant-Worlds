@@ -1,0 +1,9 @@
+type: Unloader
+name: Sodium Unloader
+description: Unloads items from a storage container or core.
+health: 120
+itemCapacity: 0
+requirements: [
+  carborundum/9
+  sodium/6
+]

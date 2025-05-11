@@ -1,0 +1,19 @@
+type: Conveyor
+name: Cadmium Conveyor
+description: "A conveyor, made of the [#ff2222]red[#ffffff] stellar metal."
+category: distribution
+health: 80
+speed: 0.055
+displayedSpeed: 7
+junctionReplacement: cadmium-junction
+bridgeReplacement: cadmium-bridge
+requirements: [
+    "cadmium/1"
+]
+alwaysUnlocked: true
+research: {
+    parent: akrehela-Distribution
+},
+researchCost: [
+	"cadmium/10"
+]

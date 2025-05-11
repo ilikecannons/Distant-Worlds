@@ -1,0 +1,25 @@
+name: Quartz Pipe Bridge
+description: Allows liquids to cross over buildings or terrain.
+type: LiquidBridge
+health: 100
+liquidCapacity: 10
+category: liquid
+hasPower: false
+range: 4
+requirements: [
+  quartz/9
+  iceshard/4
+]
+research: {
+    parent: "quartz-pipe-router",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "cryoo-lake"
+        }
+    ]
+},
+researchCost: [
+    quartz/125
+    iceshard/80
+  ]

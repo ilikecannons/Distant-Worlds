@@ -1,0 +1,16 @@
+type: OverflowGate
+name: Cadmium Overflow Gate
+description: If the front is filled, it outputs to the sides.
+health: 65
+requirements: [
+  cadmium/4
+  quartz/1
+] 
+category: distribution
+research: {
+    parent: cadmium-router
+},
+researchCost: [
+    cadmium/100
+	quartz/25
+  ]

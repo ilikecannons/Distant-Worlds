@@ -1,0 +1,22 @@
+type: WallCrafter
+name: Quartz Mining Unit
+description: Mines quartz from walls.
+size: 2
+category: production
+requirements: [
+  cadmium/16
+]
+consumes: {
+  power: 0.2
+}
+drillTime: 240
+output: quartz
+attribute: quartz
+ambientSound: drill
+ambientSoundVolume: 0.08
+research: micron-drill
+squareSprite: false
+researchCost: [
+  cadmium/100
+]
+

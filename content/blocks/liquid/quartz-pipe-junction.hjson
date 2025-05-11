@@ -1,0 +1,24 @@
+name: Quartz Pipe Junction
+description: A pipe crossing, allows pipes to efficiently pass over each other without mixing liquids.
+details: Mixing liquids is the cause of the Keatrine Disaster. They learned it has strong reactions with Sodium.
+type: LiquidJunction
+health: 100
+category: liquid
+hasPower: false
+requirements: [
+  quartz/6
+  iceshard/3
+]
+research: {
+    parent: "quartz-pipe-router",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "cryoo-lake"
+        }
+    ]
+},
+researchCost: [
+    quartz/130
+    iceshard/90
+  ]

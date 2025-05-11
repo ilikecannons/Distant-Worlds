@@ -1,0 +1,15 @@
+ "type": "ItemBridge",
+  "name": "Cadmium Bridge",
+  "description": "A bridge so items can pass over buildings or terrain.",
+  "health": 75,
+  "range": 4,
+  "transportTime": 7,
+  "hasPower": false,
+requirements: [
+  cadmium/12
+] 
+category: distribution
+research: cadmium-conveyor
+researchCost: [
+    cadmium/85
+  ]

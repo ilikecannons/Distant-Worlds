@@ -1,0 +1,21 @@
+type: Pump
+name: Gravitic Pump
+description: Pumps liquids but really good
+health: 245
+size: 3
+pumpAmount: 0.8
+squareSprite: false
+category: liquid
+hasPower: true
+consumes: {
+  power: 0.6
+  liquids: [
+    liquid-keatrine/0.05
+  ]
+}
+requirements: [
+  quartz/50
+  diamond/80
+  carborundum/35
+  metallic-frag/25
+]

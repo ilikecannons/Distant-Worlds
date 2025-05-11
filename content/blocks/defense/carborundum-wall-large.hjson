@@ -1,0 +1,24 @@
+    "type": "Wall",
+	"name": "Large Carborundum Wall",
+	"description": "Big strong, sturdy wall."
+        "details": "Hmm, it hurts. Why does it taste like blood?",
+    "scaledHealth": 400,
+    "size": 2,
+	absorbLasers: true
+	hasPower: false
+    category: defense
+requirements: [
+  carborundum/24
+]
+research: {
+  parent: carborundum-wall,
+  objectives: [
+    {
+      type: "SectorComplete",
+      preset: "transport-cove"
+    }
+  ]
+}
+researchCost: [
+  carborundum/1200
+]

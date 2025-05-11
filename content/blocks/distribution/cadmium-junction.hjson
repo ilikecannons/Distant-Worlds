@@ -1,0 +1,14 @@
+type: Junction
+name: Cadmium Junction
+description: Lets conveyor lines pass through each other.
+health: 40
+speed: 12
+capacity: 8
+requirements: [
+  cadmium/3
+] 
+category: distribution
+research: cadmium-conveyor
+researchCost: [
+    cadmium/85
+  ]

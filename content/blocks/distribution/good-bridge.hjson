@@ -1,0 +1,17 @@
+ "type": "ItemBridge",
+  "name": "Short-ranged Teleporter",
+  "description": "Annihilates the resource, beams the pure energy over, then reconstructs it.",
+  "health": 150,
+  "range": 15,
+  "transportTime": 7,
+  "hasPower": false,
+requirements: [
+  cadmium/22
+  gold/12
+  metallic-frag/2
+] 
+category: distribution
+research: cadmium-conveyor
+researchCost: [
+    cadmium/85
+  ]

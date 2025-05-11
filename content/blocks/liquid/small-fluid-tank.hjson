@@ -1,0 +1,15 @@
+name: Small Fluid Tank
+description: Stores liquids.
+details: It's secretly a router...
+type: LiquidRouter
+health: 350
+liquidCapacity: 500
+size: 2
+category: liquid
+placeableLiquid: true
+hasPower: false
+requirements: [
+  iceshard/25
+  cadmium/40
+  carborundum/16
+]

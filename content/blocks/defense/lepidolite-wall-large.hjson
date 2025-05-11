@@ -1,0 +1,14 @@
+    "type": "Wall",
+	"name": "Large Lepidolite Wall",
+	"description": "Really strong wall, strongest one you can make."
+    "scaledHealth": 890,
+    "size": 2,
+	absorbLasers: true
+    chanceDeflect: 0.1
+	hasPower: false
+    category: defense
+requirements: [
+  diamond/16
+  metallic-frag/16
+  salt/8
+]

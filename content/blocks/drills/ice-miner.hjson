@@ -1,0 +1,21 @@
+type: WallCrafter
+name: Ice Mining Unit
+description: Mines ice from walls.
+size: 2
+category: production
+requirements: [
+  cadmium/16
+]
+consumes: {
+  power: 0.2
+}
+drillTime: 240
+output: iceshard
+attribute: iceshard
+ambientSound: drill
+ambientSoundVolume: 0.08
+research: quartz-miner
+squareSprite: false
+researchCost: [
+  cadmium/100
+]

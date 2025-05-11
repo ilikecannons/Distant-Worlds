@@ -1,0 +1,21 @@
+type: StorageBlock
+name: Lithium Cache
+size: 3
+health: 820
+itemCapacity: 200
+category: effect
+requirements: [
+  quartz/75
+  carborundum/30
+  lithium/50
+]
+researchCostMultiplier: 2.5
+research: {
+    parent: "akrehela-Effect",
+    objectives: [
+        {
+            type: "SectorComplete",
+            preset: "secret-pass"
+        }
+    ]
+},

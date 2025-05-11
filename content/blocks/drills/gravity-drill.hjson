@@ -1,0 +1,55 @@
+  "name": "Graviton Ray Drill",
+  "description": "Utilizes gravitons to rip ores out of the ground with gravity."
+  "type": "Drill",
+  hasLiquids: true
+  hasPower: true
+  "size": 3,
+  "itemCapacity": 35,
+  "tier": 4,
+  "drillTime": 100,
+  "drawRim": true,
+  "heatColor": 89effc,
+  hasPower: true
+  rotateSpeed: 7
+  liquidBoostIntensity: 1.5
+  consumes: {
+    power: 2
+    liquid: {
+      liquid: liquid-xenon
+      amount: 0.03
+      optional: true
+      booster: true
+    }
+  }
+  "drawMineItem": true,
+  "updateEffect": {
+    type: RadialEffect
+    layer: 118
+    rotationSpacing: 80
+    amount: 2
+    lengthOffset: 6
+    effect: {
+      particles: 4
+      length: 90
+      lifetime: 200
+      cone: 40
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 0
+      sizeTo: 5
+      colorFrom: ccddcc66
+      colorTo: 22332200
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 110
+    }
+  }
+  booster: liquid-xenon
+  liquidBoostIntensity: 1
+  requirements: [
+    cadmium/75
+    lithium/20
+    salt/45
+    carborundum/60
+  ]
+  "category": "production",

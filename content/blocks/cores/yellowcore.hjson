@@ -1,0 +1,28 @@
+type: CoreBlock
+name: Core: Polaris
+description: Do I need to say it again?
+requirements: [
+  cadmium/1600
+  sodium/800
+  lithium/550
+  gold/650
+]
+isFirstTier: false
+size: 4
+squareSprite: false
+alwaysUnlocked: true
+unitType: coreflare-2
+health: 3000
+itemCapacity: 6700
+unitCapModifier: 12
+category: effect
+research: {
+    parent: "akrehela-Cores",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "golden-island"
+        }
+    ]
+}
+researchCostMultplier: 5.7

@@ -1,0 +1,14 @@
+    "type": "Wall",
+	"name": "Diamond Wall",
+	"description": "Frontline wall used when high defense is needed."
+        "details": "A good way to show off your wealth.",
+    "health": 640,
+    "size": 1,
+	absorbLasers: true
+	hasPower: false
+        chanceDeflect: 0.2
+    category: defense
+requirements: [
+  diamond/4
+  carborundum/2
+]

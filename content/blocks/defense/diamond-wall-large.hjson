@@ -1,0 +1,14 @@
+    "type": "Wall",
+	"name": "Large Diamond Wall",
+	"description": "Frontline wall used when high defense is needed."
+        "details": "The most rare wall you'll find...",
+    "scaledHealth": 640,
+    "size": 2,
+	absorbLasers: true
+	hasPower: false
+        chanceDeflect: 0.2
+    category: defense
+requirements: [
+  diamond/16
+  carborundum/8
+]

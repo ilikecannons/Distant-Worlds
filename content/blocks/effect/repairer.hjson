@@ -1,0 +1,43 @@
+  "type": "MendProjector",
+  "name": "Repair Projector",
+  "description": "Repairs buildings passively within a small field. Can be booosted with Keatrine.",
+  "health": 450,
+  "size": 2,
+  "range": 90,
+  "reload": 110,
+  "phase": "afffb1",
+  "color": "00d705",
+  "hasPower": true,
+  hasLiquids: true
+  liquidCapacity: 30
+  healPercent: 3
+  phaseBoost: 3
+  phaseRangeBoost: 30
+  consumes: {
+    power: 0.9
+    liquids: {
+    "liquids": [
+      "liquid-keatrine/0.3"
+    ],
+      optional: true
+      booster: true
+    }
+  }
+  category: effect
+requirements: [
+    cadmium/50
+    carbon/30
+]
+research: {
+    parent: "akrehela-Effect",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "cryoo-lake"
+        }
+    ]
+}
+researchCost: [
+    cadmium/150
+    carbon/90
+  ]

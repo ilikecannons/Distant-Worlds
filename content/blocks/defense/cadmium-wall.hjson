@@ -1,0 +1,18 @@
+    "type": "Wall",
+	"name": "Cadmium Wall",
+	"description": "A basic wall for defending the core."
+    "health": 150,
+    "size": 1,
+	absorbLasers: false
+    chanceDeflect: 0
+	hasPower: false
+    category: defense
+requirements: [
+  cadmium/6
+]
+research: {
+  parent: "akrehela-Defense",
+}
+researchCost: [
+  cadmium/50
+]

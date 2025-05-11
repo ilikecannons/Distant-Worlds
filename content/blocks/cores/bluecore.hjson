@@ -1,0 +1,30 @@
+type: CoreBlock
+name: Core: Lanikea
+description: The final tier of core, most storage, most health.
+requirements: [
+  cadmium/3700
+  gold/2580
+  diamond/1240
+  metallic-frag/570
+  lithium/1890
+  carborundum/2620
+]
+isFirstTier: false
+size: 5
+squareSprite: false
+alwaysUnlocked: true
+unitType: coreflare-3
+health: 18750
+itemCapacity: 9500
+unitCapModifier: 18
+category: effect
+research: {
+    parent: "yellowcore",
+    objectives: [
+        {
+            type: "OnSector",
+            preset: "golden-island"
+        }
+    ]
+}
+researchCostMultplier: 5.7

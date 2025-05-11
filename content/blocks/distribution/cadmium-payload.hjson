@@ -1,0 +1,13 @@
+type: PayloadConveyor
+name: Cadmium Payload Conveyor
+description: A conveyor used to transport large payloads
+details: that's a very big conveyor
+size: 3
+moveTime: 70
+moveForce: 400
+payloadLimit: 3
+category: units
+requirements: [
+  cadmium/10
+  carborundum/5
+]

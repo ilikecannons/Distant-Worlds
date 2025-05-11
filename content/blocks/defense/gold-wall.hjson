@@ -1,0 +1,27 @@
+    "type": "Wall",
+	"name": "Golden Wall",
+	"description": "Golden-lithium alloy wall, can absorb lasers."
+        "details": "",
+    "health": 550,
+    "size": 1,
+	absorbLasers: true
+    chanceDeflect: 0.1
+	hasPower: false
+    category: defense
+requirements: [
+  gold/4
+  lithium/2
+]
+research: {
+  parent: sodium-wall,
+  objectives: [
+    {
+      type: "OnSector",
+      preset: "golden-island"
+    }
+  ]
+}
+researchCost: [
+  gold/200
+  lithium/100
+]

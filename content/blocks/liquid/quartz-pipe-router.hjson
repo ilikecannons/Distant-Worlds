@@ -1,0 +1,26 @@
+type: LiquidRouter
+name: Quartz Pipeline Router
+description: A router, but for liquids!
+details: You'll need this, trust me.
+health: 100
+liquidCapacity: 10
+category: liquid
+placeableLiquid: true
+hasPower: false
+requirements: [
+  quartz/3
+  iceshard/2
+]
+research: {
+  parent: quartz-pipe,
+  objectives: [
+    {
+      type: "OnSector",
+      preset: "cryoo-lake"
+    }
+  ]
+}
+researchCost: [
+    quartz/80
+    iceshard/60
+  ]

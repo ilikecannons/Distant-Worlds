@@ -1,0 +1,6 @@
+type: StaticWall
+variants: 2
+attributes: {
+  iceshard: 1
+  keatite: 1
+}

@@ -1,0 +1,12 @@
+type: Sorter
+name: Cadmium Sorter
+description: Outputs the selected item on the front. All other items get put to the sides.
+health: 50
+requirements: [
+  cadmium/5
+] 
+category: distribution
+research: cadmium-junction
+researchCost: [
+    cadmium/100
+  ]

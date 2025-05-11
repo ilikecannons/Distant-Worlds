@@ -1,0 +1,13 @@
+name: Gold Pipeline
+description: sends items forward using negative pressure.
+type: Duct
+health: 90
+speed: 4
+capacity: 2
+requirements: [
+sodium/1
+gold/2
+] 
+category: distribution
+junctionReplacement: cadmium-junction
+bridgeReplacement: cadmium-bridge

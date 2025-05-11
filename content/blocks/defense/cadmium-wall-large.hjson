@@ -1,0 +1,18 @@
+    "type": "Wall",
+	"name": "Large Cadmium Wall",
+	"description": "A basic wall for defending the core."
+    "health": 600,
+    "size": 2,
+	absorbLasers: false
+    chanceDeflect: 0
+	hasPower: false
+    category: defense
+requirements: [
+  cadmium/24
+]
+research: {
+  parent: "cadmium-wall",
+}
+researchCost: [
+  cadmium/200
+]
